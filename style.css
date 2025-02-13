@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(Vmake1738242988733.png);
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.myHeader {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* .list {
+    display: none;
+} */
+.myHeader a {
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+.headerLeft {
+    width: 500px;
+    margin-right: -100px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.headerMiddle {
+    width: 80px;
+    margin-top: -14px;
+}
+.headerRight {
+    width: 540px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.orangeButton {
+    width: 260px;
+    height: 50px;
+    margin-top: -10px;
+    background-color: #FA6312;
+    border-radius: 15px;
+    padding-top: 10px;
+}
+.languageButton {
+    width: 53px;
+    height: 50px;
+    margin-top: -10px;
+    padding-top: 7px;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+.myMainOne {
+    margin-bottom: 50px;
+}
+.myMainOne img {
+    position: relative;
+    margin-left: 240px;
+    margin-top: -20px;
+}
+.myMainOneMiddle .textOne {
+    font-size: 4.6rem;
+    color: #EEEEEE;
+    position: absolute;
+    top: 290px;
+    margin-left: 180px;
+}
+.textOne span, .textTwo span, .myMainUnderTop span {
+    color: #FA6312;
+}
+.myMainOneMiddle .textTwo {
+    font-size: 4.6rem;
+    color: #EEEEEE;
+    position: absolute;
+    top: 380px;
+    margin-left: 410px;
+}
+.myMainOneMiddle h1, .myMainUnderTop h2 {
+    font-weight: 600;
+}
+.myMainOneLeft {
+    position: absolute;
+    top: 325px;
+    margin-left: -220px;
+}
+.myMainOneRight {
+    position: absolute;
+    top: 340px;
+    margin-left: 900px;
+}
+.myMainUnder {
+    width: 1200px;
+    height: 160px;
+    position: absolute;
+    background-color: #EEEEEE;
+    border-radius: 35px;
+    top: 520px;
+    margin-left: 50px;
+}
+.myMainUnderTop h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+.myMainUnderBottom {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.myMainUnderBottom .inp {
+    border: 3px solid #FA6312;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #EEEEEE;
+    font-weight: 600;
+    font-size: 20px;
+}
+.myMainUnderBottom .btn {
+    border: 3px solid #FA6312;
+    border-radius: 15px;
+    padding: 10px 40px 10px 40px;
+    background-color: #FA6312;
+    color: #EEEEEE;
+    font-weight: 600;
+    font-size: 20px;
+}
+input::placeholder {
+    color: #fa63128f;
+}
+
+.myMainUnderSale {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 684px;
+}
+.myMainUnderSale h5 {
+    color: #FA6312;
+}
+.timer {
+    display: flex;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #FA6312;
+}
+  
+.timerDays::before, .timerHours::before, .timerMinutes::before, .timerSeconds::before {
+    content: "";
+}
+
+.myMainTwo {
+    width: 100%;
+    height: 36rem;
+    background-color: #EEEEEE;
+    border-radius: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.myMainTwoBlockLeft {
+    width: 33rem;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.myMainTwoBlockLeft h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 0.8;
+}
+.hTwoOrange {
+    color: #FA6312;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+.textP {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.myStarOne {
+    margin-left: -30%;
+    margin-top: -30%;
+    transform: rotate(350deg);
+    z-index: 999;
+    width: 10rem;
+}
+.myMainTwoBlockRight {
+    width: 33rem;
+}
+.myStarTwo {
+    margin-left: 86%;
+    margin-top: -10%;
+    z-index: 999;
+}
+.carusel {
+    width: 34rem;
+    margin-top: -18%;
+    margin-left: -6%;
+}
+.myVector {
+    margin-left: -300%;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .myMainOne img {
+        margin-left: 18%;
+    }
+    .myMainOneMiddle .textOne {
+        font-size: 4.4rem;
+        margin-left: 14%;
+    }
+    .myMainOneMiddle .textTwo {
+        font-size: 4.4rem;
+        margin-left: 30%;
+    }
+    .myMainOneLeft {
+        margin-left: 4%;
+    }
+    .myMainOneRight {
+        margin-left: 74%;
+    }
+    .myMainUnder {
+        margin-left: 4%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .myHeader {
+        margin-left: 4%;
+    }
+    .myHeader a {
+        font-size: 1.1rem;
+    }
+    .headerLeft {
+        width: 40%;
+    }
+    .headerRight {
+        width: 45%;
+    }
+    .orangeButton {
+        width: 190px;
+        padding-top: 11px;
+    }
+    .myMainOne img {
+        margin-left: 6%;
+    }
+    .myMainOneMiddle .textOne {
+        font-size: 4rem;
+        margin-left: 8%;
+    }
+    .myMainOneMiddle .textTwo {
+        font-size: 4rem;
+        margin-left: 26%;
+    }
+    .myMainOneLeft {
+        margin-left: -4%;
+        top: 280px;
+    }
+    .myMainOneRight {
+        margin-left: 77%;
+        top: 390px;
+    }
+    .myMainUnder {
+        width: 1000px;
+        margin-left: -3%;
+        height: 150px;
+    }
+    .myMainUnderTop h2 {
+        font-size: 1.5rem;
+    }
+    .myMainUnderBottom {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    .myMainUnderBottom .inp {
+        width: 250px;
+    }
+    .myMainUnderSale {
+        margin-left: 30%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .myHeader {
+        margin-left: 8%;
+    }
+    .myHeader a {
+        font-size: 0.84rem;
+    }
+    .headerLeft {
+        width: 37%;
+    }
+    .headerRight {
+        width: 40%;
+    }
+    .orangeButton {
+        width: 150px;
+        height: 40px;
+        padding-top: 7px;
+        border-radius: 12px;
+    }
+    .languageButton {
+        width: 40px;
+        height: 40px;
+        padding-top: 6px;
+    }
+    .myMainOne img {
+        margin-left: -2%;
+    }
+    .myMainOneMiddle .textOne {
+        width: 800px;
+        font-size: 4rem;
+        margin-left: -2%;
+    }
+    .myMainOneMiddle .textTwo {
+        font-size: 4rem;
+        margin-left: 23%;
+    }
+    .myMainOneLeft {
+        display: none;
+    }
+    .myMainOneRight {
+        display: none;
+    }
+    .myMainUnder {
+        width: 800px;
+        margin-left: -3%;
+    }
+    .myMainUnderTop h2 {
+        font-size: 1.5rem;
+    }
+    .myMainUnderBottom {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    .myMainUnderBottom .inp {
+        display: none;
+    }
+    .myMainUnderBottom .btn {
+        width: 300px;
+        margin-top: -10px;
+    }
+    .myMainUnderSale {
+        margin-left: 32%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .myHeader {
+        width: 1000px;
+        margin-left: 70%;
+    }
+    /* .list {
+        display: flex;
+        margin-top: 29px;
+    }
+    select {
+        width: 50px;
+        height: 45px;
+        background-color: #FA6312;
+        border: none;
+        border-radius: 15px;
+        text-align: center;
+    } */
+    .myHeader a {
+        font-size: 1.6rem;
+    }
+    .none {
+        display: none;
+    }
+    .headerLeft {
+        width: 1%;
+        display: none;
+    }
+    .headerMiddle {
+        margin-left: -70px;
+        margin-top: -10px;
+    }
+    .headerRight {
+        width: 70%;
+    }
+    .orangeButton {
+        width: 320px;
+        height: 60px;
+        margin-left: -90px;
+        padding-top: 9px;
+        border-radius: 12px;
+    }
+    .languageButton {
+        width: 70px;
+        height: 60px;
+        padding-top: 8px;
+    }
+    .myMainOne img {
+        width: 900px;
+        margin-left: 17%;
+    }
+    .myMainOneMiddle .textOne {
+        width: 1000px;
+        font-size: 5rem;
+        top: 310px;
+        margin-left: 10%;
+    }
+    .myMainOneMiddle .textTwo {
+        width: 1000px;
+        font-size: 5rem;
+        top: 410px;
+        margin-left: 70%;
+    }
+    .myMainOneLeft {
+        display: none;
+    }
+    .myMainOneRight {
+        display: none;
+    }
+    .myMainUnder {
+        width: 1000px;
+        height: 380px;
+        margin-left: 10%;
+        top: 560px;
+    }
+    .myMainUnderTop h2 {
+        font-size: 2rem;
+    }
+    .myMainUnderBottom {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+    }
+    .myMainUnderBottom .inp {
+        font-size: 2rem;
+        padding: 26px;
+        border-radius: 30px;
+    }
+    .myMainUnderBottom input {
+        margin-bottom: 10px;
+    }
+    .myMainUnderBottom .btn {
+        font-size: 2rem;
+        padding: 5px 137px 5px 140px;
+        border-radius: 30px;
+    }
+    .myMainUnderSale {
+        width: 800px;
+        top: 950px;
+        margin-left: 31%;
+    }
+    .myMainUnderSale h5, .myMainUnderSale .timer {
+        font-size: 2rem;
+    }
+}
