@@ -17,9 +17,11 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-/* .list {
-    display: none;
-} */
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .myHeader a {
     font-size: 1.3rem;
     color: white;
@@ -66,6 +68,8 @@ body {
     position: relative;
     margin-left: 240px;
     margin-top: -20px;
+    opacity: 0;
+    animation: ani 2.5s forwards;
 }
 .myMainOneMiddle .textOne {
     font-size: 4.6rem;
@@ -209,6 +213,8 @@ input::placeholder {
     margin-left: -300%;
 }
 
+
+
 @media (min-width: 1200px) and (max-width: 1399px) {
     .myMainOne img {
         margin-left: 18%;
@@ -248,6 +254,9 @@ input::placeholder {
         width: 190px;
         padding-top: 11px;
     }
+    .languageButton {
+        padding-top: 9px;
+    }
     .myMainOne img {
         margin-left: 6%;
     }
@@ -285,6 +294,58 @@ input::placeholder {
     }
     .myMainUnderSale {
         margin-left: 30%;
+    }
+
+    .myMainTwo {
+        width: 100%;
+        height: 37rem;
+        background-color: #EEEEEE;
+        border-radius: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .myMainTwoBlockLeft {
+        width: 26rem;
+        margin-top: 3%;
+        margin-left: 2%;
+    }
+    .myMainTwoBlockLeft h2 {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 0.8;
+    }
+    .hTwoOrange {
+        color: #FA6312;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+    .textP {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    .myStarOne {
+        margin-left: -26%;
+        margin-top: -40%;
+        transform: rotate(350deg);
+        z-index: 999;
+        width: 9rem;
+    }
+    .myMainTwoBlockRight {
+        width: 30rem;
+    }
+    .myStarTwo {
+        width: 6rem;
+        margin-left: 86%;
+        margin-top: -10%;
+        z-index: 999;
+    }
+    .carusel {
+        width: 30rem;
+        margin-top: -7%;
+        margin-left: 4%;
+    }
+    .myVector {
+        margin-left: -300%;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -351,24 +412,51 @@ input::placeholder {
     .myMainUnderSale {
         margin-left: 32%;
     }
+
+    .myMainTwo {
+        height: 62rem;
+        flex-wrap: wrap;
+        margin-left: 7%;
+    }
+    .myMainTwoBlockLeft {
+        width: 100%;
+    }
+    .myMainTwoBlockLeft h2 {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 0.8;
+    }
+    .dark {
+        margin-left: -40%;
+    }
+    .textP {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-left: -3%;
+    }
+    .myStarOne {
+        display: none;
+    }
+    .myMainTwoBlockRight {
+        width: 100%;
+    }
+    .myStarTwo {
+        margin-left: 91%;
+        margin-top: -130%;
+        transform: rotate(350deg);
+    }
+    .carusel {
+        width: 34rem;
+        margin-top: -4%;
+        margin-left: 17%;
+    }
 }
 @media (min-width: 576px) and (max-width: 767px) {
     .myHeader {
-        width: 1000px;
-        margin-left: 70%;
+        width: 100%;
+        margin-left: 79%;
     }
-    /* .list {
-        display: flex;
-        margin-top: 29px;
-    }
-    select {
-        width: 50px;
-        height: 45px;
-        background-color: #FA6312;
-        border: none;
-        border-radius: 15px;
-        text-align: center;
-    } */
     .myHeader a {
         font-size: 1.6rem;
     }
@@ -380,7 +468,7 @@ input::placeholder {
         display: none;
     }
     .headerMiddle {
-        margin-left: -70px;
+        margin-left: -300px;
         margin-top: -10px;
     }
     .headerRight {
@@ -389,7 +477,7 @@ input::placeholder {
     .orangeButton {
         width: 320px;
         height: 60px;
-        margin-left: -90px;
+        margin-left: -150px;
         padding-top: 9px;
         border-radius: 12px;
     }
@@ -400,19 +488,19 @@ input::placeholder {
     }
     .myMainOne img {
         width: 900px;
-        margin-left: 17%;
+        margin-left: 35%;
     }
     .myMainOneMiddle .textOne {
         width: 1000px;
         font-size: 5rem;
         top: 310px;
-        margin-left: 10%;
+        margin-left: 17%;
     }
     .myMainOneMiddle .textTwo {
         width: 1000px;
         font-size: 5rem;
         top: 410px;
-        margin-left: 70%;
+        margin-left: 50%;
     }
     .myMainOneLeft {
         display: none;
@@ -423,7 +511,7 @@ input::placeholder {
     .myMainUnder {
         width: 1000px;
         height: 380px;
-        margin-left: 10%;
+        margin-left: 16%;
         top: 560px;
     }
     .myMainUnderTop h2 {
@@ -450,9 +538,184 @@ input::placeholder {
     .myMainUnderSale {
         width: 800px;
         top: 950px;
-        margin-left: 31%;
+        margin-left: 44%;
     }
     .myMainUnderSale h5, .myMainUnderSale .timer {
         font-size: 2rem;
+    }
+
+    .myMainTwo {
+        width: 1000px;
+        height: 75rem;
+        flex-wrap: wrap;
+        margin-left: 30%;
+        margin-top: 35%;
+    }
+    .myMainTwoBlockLeft {
+        width: 90%;
+    }
+    .myMainTwoBlockLeft h2 {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 0.8;
+    }
+    .dark {
+        margin-left: -30%;
+    }
+    .textP {
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-left: -3%;
+    }
+    .myStarOne {
+        display: none;
+    }
+    .myMainTwoBlockRight {
+        width: 100%;
+    }
+    .myStarTwo {
+        margin-left: 93%;
+        margin-top: -115%;
+        transform: rotate(350deg);
+    }
+    .carusel {
+        width: 38rem;
+        margin-top: -2%;
+        margin-left: 21%;
+    }
+}
+@media (min-width: 320px) and (max-width: 576px) {
+    .myHeader {
+        width: 50rem;
+        margin-left: 65%;
+    }
+    .myHeader a {
+        font-size: 1.6rem;
+    }
+    .none {
+        display: none;
+    }
+    .headerLeft {
+        width: 1%;
+        display: none;
+    }
+    .headerMiddle {
+        margin-left: -70px;
+        margin-top: -10px;
+    }
+    .headerRight {
+        width: 70%;
+    }
+    .orangeButton {
+        width: 320px;
+        height: 60px;
+        margin-left: -10px;
+        padding-top: 9px;
+        border-radius: 12px;
+    }
+    .languageButton {
+        width: 70px;
+        height: 60px;
+        padding-top: 8px;
+    }
+    .myMainOne img {
+        width: 900px;
+        margin-left: 44%;
+    }
+    .myMainOneMiddle .textOne {
+        width: 1000px;
+        font-size: 5rem;
+        top: 310px;
+        margin-left: 30%;
+    }
+    .myMainOneMiddle .textTwo {
+        width: 1000px;
+        font-size: 5rem;
+        top: 410px;
+        margin-left: 100%;
+    }
+    .myMainOneLeft {
+        display: none;
+    }
+    .myMainOneRight {
+        display: none;
+    }
+    .myMainUnder {
+        width: 1000px;
+        height: 380px;
+        margin: auto;
+        margin-left: 30%;
+        top: 560px;
+    }
+    .myMainUnderTop h2 {
+        font-size: 2rem;
+    }
+    .myMainUnderBottom {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+    }
+    .myMainUnderBottom .inp {
+        font-size: 2rem;
+        padding: 26px;
+        border-radius: 30px;
+    }
+    .myMainUnderBottom input {
+        margin-bottom: 10px;
+    }
+    .myMainUnderBottom .btn {
+        font-size: 2rem;
+        padding: 5px 137px 5px 140px;
+        border-radius: 30px;
+    }
+    .myMainUnderSale {
+        width: 800px;
+        top: 950px;
+        margin-left: 61%;
+    }
+    .myMainUnderSale h5, .myMainUnderSale .timer {
+        font-size: 2rem;
+    }
+
+    .myMainTwo {
+        width: 1000px;
+        height: 75rem;
+        flex-wrap: wrap;
+        margin-left: 30%;
+        margin-top: 60%;
+    }
+    .myMainTwoBlockLeft {
+        width: 90%;
+    }
+    .myMainTwoBlockLeft h2 {
+        text-align: center;
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 0.8;
+    }
+    .dark {
+        margin-left: -30%;
+    }
+    .textP {
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-left: -3%;
+    }
+    .myStarOne {
+        display: none;
+    }
+    .myMainTwoBlockRight {
+        width: 100%;
+    }
+    .myStarTwo {
+        margin-left: 93%;
+        margin-top: -115%;
+        transform: rotate(350deg);
+    }
+    .carusel {
+        width: 38rem;
+        margin-top: -2%;
+        margin-left: 21%;
     }
 }
