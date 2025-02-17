@@ -67,7 +67,7 @@ body {
 .myMainOne img {
     position: relative;
     margin-left: 240px;
-    margin-top: -20px;
+    margin-top: 20px;
     opacity: 0;
     animation: ani 2.5s forwards;
 }
