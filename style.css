@@ -588,7 +588,7 @@ input::placeholder {
 @media (min-width: 320px) and (max-width: 576px) {
     .myHeader {
         width: 50rem;
-        margin-left: 65%;
+        margin-left: 17%;
     }
     .myHeader a {
         font-size: 1.6rem;
