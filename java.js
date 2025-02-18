@@ -27,3 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTimer();
     let timeUpd = setInterval(updateTimer, 1000);
 });
+
+window.addEventListener('scroll', function() {
+    let element = document.getElementById('myElement');
+    let scrollPosition = window.scrollY + this.window.innerHeight;
+    if (scrollPosition < 1200) {
+        element.style.display = 'none';
+    }
+    else {
+        element.style.display = 'flex';
+    }
+});
