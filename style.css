@@ -11,15 +11,23 @@ body {
 }
 
 .myHeader {
-    height: 30px;
+    height: 110px;
     display: flex;
     justify-content: space-between;
     text-align: center;
     margin-bottom: 20px;
+    animation: animHeader 2.5s forwards;
 }
-@keyframes ani {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+@keyframes animHeader {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+    50% {
+        backdrop-filter: blur(5px);
+    }
+    100% {
+        backdrop-filter: blur(10px);
+    }
 }
 
 .myHeader a {
@@ -39,7 +47,7 @@ body {
     margin-top: -14px;
 }
 .headerRight {
-    width: 540px;
+    width: 500px;
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
@@ -62,14 +70,36 @@ body {
 }
 
 .myMainOne {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+}
+.myImg img {
+    margin: auto;
+    animation: ani 2.5s forwards,
+    circle 10s infinite linear;
+}
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .myMainOne img {
     position: relative;
     margin-left: 240px;
     margin-top: 20px;
-    opacity: 0;
-    animation: ani 2.5s forwards;
 }
 .myMainOneMiddle .textOne {
     font-size: 4.6rem;
@@ -93,13 +123,31 @@ body {
 }
 .myMainOneLeft {
     position: absolute;
-    top: 325px;
-    margin-left: -220px;
+    top: 315px;
+    /* margin-left: -220px; */
+    animation: aniLeft 2.5s forwards;
+}
+@keyframes aniLeft {
+    0% {
+        transform: translateX(-900px);
+    }
+    100% {
+        transform: translateX(-220px);
+    }
 }
 .myMainOneRight {
     position: absolute;
     top: 340px;
-    margin-left: 900px;
+    /* margin-left: 900px; */
+    animation: aniRight 2.5s forwards;
+}
+@keyframes aniRight {
+    0% {
+        transform: translateX(-900px);
+    }
+    100% {
+        transform: translateX(900px);
+    }
 }
 .myMainUnder {
     width: 1200px;
@@ -142,18 +190,22 @@ input::placeholder {
 }
 
 .myMainUnderSale {
-    height: 20px;
+    height: 70px;
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 684px;
+    top: 680px;
+    background-color: black;
 }
 .myMainUnderSale h5 {
     color: #FA6312;
+    padding-top: 6px;
+    font-size: 1.8rem;
 }
 .timer {
     display: flex;
-    font-size: 20px;
+    padding-top: 5px;
+    font-size: 1.6rem;
     margin-left: 10px;
     color: #FA6312;
 }
@@ -163,12 +215,29 @@ input::placeholder {
 }
 
 .myMainTwo {
-    width: 100%;
+    /* width: 100%; */
     height: 36rem;
     background-color: #EEEEEE;
     border-radius: 70px;
     display: flex;
     justify-content: space-between;
+}
+.myMainTwoAnim {
+    animation: animMainTwo 2.5s forwards;
+}
+@keyframes animMainTwo {
+    0% {
+        transform: translateX(-900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .myMainTwoBlockLeft {
     width: 33rem;
@@ -212,6 +281,39 @@ input::placeholder {
 .myVector {
     margin-left: -300%;
 }
+.myMainThree {
+    width: 100%;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+.myMainThreeLeft {
+    width: 640px;
+}
+.myMainThreeRight {
+    width: 640px;
+    margin-top: ;
+}
+.myMainThreeRightTop {
+    display: flex;
+    justify-content: space-around;
+}
+.myMainThreeRightBottom {
+    display: flex;
+    justify-content: space-around;
+}
+.myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
+    width: 320px;
+    height: 206px;
+    background-color: #FA6312;
+    border-radius: 60px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+.myMainThreeRightBottomRight {
+    width: 320px;
+    height: 206px;
+}
 
 
 
@@ -239,7 +341,7 @@ input::placeholder {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .myHeader {
-        margin-left: 4%;
+        margin-left: 3%;
     }
     .myHeader a {
         font-size: 1.1rem;
@@ -269,12 +371,28 @@ input::placeholder {
         margin-left: 26%;
     }
     .myMainOneLeft {
-        margin-left: -4%;
+        /* margin-left: -4%; */
         top: 280px;
     }
+    @keyframes aniLeft {
+        0% {
+            transform: translateX(-900px);
+        }
+        100% {
+            transform: translateX(-40px);
+        }
+    }
     .myMainOneRight {
-        margin-left: 77%;
-        top: 390px;
+        /* margin-left: 77%; */
+        top: 350px;
+    }
+    @keyframes aniRight {
+        0% {
+            transform: translateX(-900px);
+        }
+        100% {
+            transform: translateX(760px);
+        }
     }
     .myMainUnder {
         width: 1000px;
@@ -293,7 +411,9 @@ input::placeholder {
         width: 250px;
     }
     .myMainUnderSale {
-        margin-left: 30%;
+        height: 80px;
+        margin-left: 23%;
+        top: 670px;
     }
 
     .myMainTwo {
@@ -350,7 +470,7 @@ input::placeholder {
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .myHeader {
-        margin-left: 8%;
+        margin-left: 6%;
     }
     .myHeader a {
         font-size: 0.84rem;
@@ -410,7 +530,13 @@ input::placeholder {
         margin-top: -10px;
     }
     .myMainUnderSale {
-        margin-left: 32%;
+        margin-left: 25%;
+    }
+    .myMainUnderSale h5 {
+        font-size: 1.5rem;
+    }
+    .timer {
+        font-size: 1.4rem;
     }
 
     .myMainTwo {

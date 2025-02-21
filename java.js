@@ -27,3 +27,45 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTimer();
     let timeUpd = setInterval(updateTimer, 1000);
 });
+
+// window.addEventListener('scroll', function() {
+//     let element = document.getElementById('myElement');
+//     let scrollPosition = window.scrollY + this.window.innerHeight;
+    // if (scrollPosition < 1200) {
+    //     element.style.display = 'none';
+    // }
+    // else {
+    //     element.style.display = 'flex';
+    //     element.style.animation = 'animMainTwo 2.5 forwards';
+    //     element.style.k
+    // }
+// });
+
+let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('myMainTwoAnim');
+      }
+    });
+  });
+  observer.observe(document.querySelector('.myMainTwo'));
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     let myMainTwo = document.querySelectorAll('.myMainTwo');
+//     function checkBlocksVisibility() {
+//         let windowHeight = window.innerHeight;
+//         myMainTwo.forEach(block => {
+//             let blockPosition = myMainTwo.getBoundingClientRect().top;
+//             if (blockPosition < windowHeight - 100) {
+//                 block.style.opacity = "1";
+//                 block.style.transform = "translateY(0)";
+//             } 
+//             else {
+//                 block.style.opacity = "0";
+//                 block.style.transform = "translateY(50px)";
+//             }
+//         });
+//     }
+//     checkBlocksVisibility();
+//     window.addEventListener('scroll', checkBlocksVisibility);
+// });
