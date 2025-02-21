@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let timeUpd = setInterval(updateTimer, 1000);
 });
 
+<<<<<<< HEAD
 // window.addEventListener('scroll', function() {
 //     let element = document.getElementById('myElement');
 //     let scrollPosition = window.scrollY + this.window.innerHeight;
@@ -69,3 +70,15 @@ let observer = new IntersectionObserver(entries => {
 //     checkBlocksVisibility();
 //     window.addEventListener('scroll', checkBlocksVisibility);
 // });
+=======
+window.addEventListener('scroll', function() {
+    let element = document.getElementById('myElement');
+    let scrollPosition = window.scrollY + this.window.innerHeight;
+    if (scrollPosition < 1200) {
+        element.style.display = 'none';
+    }
+    else {
+        element.style.display = 'flex';
+    }
+});
+>>>>>>> 4347115e7e6f7040d032ed20c0c83bd80aed7856
