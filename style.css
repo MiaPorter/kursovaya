@@ -11,11 +11,12 @@ body {
 }
 
 .myHeader {
-    height: 110px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     text-align: center;
     margin-bottom: 20px;
+    border-radius: 30px;
     animation: animHeader 2.5s forwards;
 }
 @keyframes animHeader {
@@ -99,8 +100,6 @@ body {
     position: relative;
     margin-left: 240px;
     margin-top: 20px;
-<<<<<<< HEAD
-=======
     animation: ani 10s forwards infinite linear
     rotate 10s forwards;
 }
@@ -126,8 +125,7 @@ body {
     }
 }
 @keyframes ani {
-    
->>>>>>> 4347115e7e6f7040d032ed20c0c83bd80aed7856
+
 }
 .myMainOneMiddle .textOne {
     font-size: 4.6rem;
@@ -340,11 +338,43 @@ input::placeholder {
 }
 .myMainThreeRight {
     width: 640px;
-    margin-top: ;
+    margin-top: 100px;
 }
 .myMainThreeRightTop {
     display: flex;
     justify-content: space-around;
+}
+.myMainThreeRightTopLeftTop, .myMainThreeRightTopRightTop, .myMainThreeRightBottomLeftTop {
+    padding-left: 210px;
+    padding-top: 15px;
+}
+.myMainThreeRightTopLeftTop img, .myMainThreeRightTopRightTop img, .myMainThreeRightBottomLeftTop img {
+    width: 50px;
+}
+.myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2 {
+    font-size: 4.1rem;
+    text-align: center;
+    color: #EEEEEE;
+    padding-top: 15px;
+}
+.myMainThreeRightTopLeftBottom p, .myMainThreeRightTopRightBottom p, .myMainThreeRightBottomLeftTop p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #EEEEEE;
+    margin-top: -12px;
+}
+.myMainThreeRightBottomRight h2 {
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 0.6;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.white {
+    color: #EEEEEE;
+}
+.oran {
+    color: #FA6312;
 }
 .myMainThreeRightBottom {
     display: flex;
