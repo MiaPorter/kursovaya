@@ -74,10 +74,10 @@ body {
 }
 .myImg img {
     margin: auto;
-    animation: ani 2.5s forwards,
+    animation: anim 2.5s forwards,
     circle 10s infinite linear;
 }
-@keyframes ani {
+@keyframes anim {
     0% {
         opacity: 0;
     }
@@ -107,25 +107,6 @@ body {
     position: relative;
     margin-left: 240px;
     margin-top: 20px;
-}
-@keyframes ani {
-    0% {
-        width: 50px;
-        margin-left: 40%;
-        margin-top: 20px;
-        position:static;
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        width: 800px;
-        transform: rotate(360deg);
-    }
-}
-@keyframes ani {
-
 }
 .myMainOneMiddle .textOne {
     font-size: 4.6rem;
@@ -393,15 +374,10 @@ input::placeholder {
     height: 206px;
 }
 
-.Three {
-    width: 1200px;
-    height: 1500px;
-}
-
 
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-    .myMainOne img {
+    .myImg .mars {
         margin-left: 18%;
     }
     .myMainOneMiddle .textOne {
@@ -442,7 +418,7 @@ input::placeholder {
     .languageButton {
         padding-top: 9px;
     }
-    .myMainOne img {
+    .myImg .mars {
         margin-left: 6%;
     }
     .myMainOneMiddle .textOne {
@@ -455,14 +431,14 @@ input::placeholder {
     }
     .myMainOneLeft {
         /* margin-left: -4%; */
-        top: 280px;
+        top: 350px;
     }
     @keyframes aniLeft {
         0% {
             transform: translateX(-900px);
         }
         100% {
-            transform: translateX(-40px);
+            transform: translateX(-260px);
         }
     }
     .myMainOneRight {
@@ -474,7 +450,7 @@ input::placeholder {
             transform: translateX(-900px);
         }
         100% {
-            transform: translateX(760px);
+            transform: translateX(550px);
         }
     }
     .myMainUnder {
@@ -550,6 +526,32 @@ input::placeholder {
     .myVector {
         margin-left: -300%;
     }
+
+    .myMainThreeRightTop {
+        display: wrap;
+        flex-wrap: wrap;
+    }
+    .myMainThreeRightBottom {
+        display: wrap;
+        flex-wrap: wrap;
+    }
+    .marsTwo {
+        width: 30rem;
+    }
+    .myMainThreeLeft {
+        width: 600px;
+    }
+    .myMainThreeRight {
+        margin-left: -150px;
+    }
+    .myMainThreeRightTopLeft {
+        width: 300px;
+        height: 180px;
+    }
+    .myMainThreeRight {
+        width: 600px;
+        margin-top: -30px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .myHeader {
@@ -575,7 +577,7 @@ input::placeholder {
         height: 40px;
         padding-top: 6px;
     }
-    .myMainOne img {
+    .myImg .mars {
         margin-left: -2%;
     }
     .myMainOneMiddle .textOne {
@@ -695,7 +697,7 @@ input::placeholder {
         height: 60px;
         padding-top: 8px;
     }
-    .myMainOne img {
+    .myImg .mars {
         width: 900px;
         margin-left: 35%;
     }
@@ -828,7 +830,7 @@ input::placeholder {
         height: 60px;
         padding-top: 8px;
     }
-    .myMainOne img {
+    .myImg .mars {
         width: 900px;
         margin-left: 44%;
     }
