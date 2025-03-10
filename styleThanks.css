@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(Vmake1738242988733.png);
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+button {
+    background-color: #FA6312;
+    border: 3.3px solid #FA6312;
+    padding: 10px;
+    width: 150px;
+    margin-left: 25px;
+    border-radius: 33px;
+    font-size: 1.2rem;
+    color: #EEEEEE;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.myMainThanks {
+    height: 400px;
+    margin-top: 10px;
+}
+.myMainThanksImg {
+    margin-top: 70px;
+}
+.myMainThanksImg img {
+    width: 200px;
+    margin-left: 130px;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #EEEEEE;
+    text-align: center;
+    margin-top: 20px;
+}
+h2 span {
+    color: #FA6312;
+}
+p {
+    font-size: 1.1rem;
+    color: #EEEEEE;
+    text-align: center;
+    margin-top: 20px;
+}

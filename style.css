@@ -22,12 +22,15 @@ body {
 @keyframes animHeader {
     0% {
         backdrop-filter: blur(0px);
+        background-color: rgba(0, 0, 0, 0);
     }
     50% {
         backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.119);
     }
     100% {
         backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.296);
     }
 }
 .myHeader a {
@@ -201,7 +204,7 @@ body {
     font-weight: 600;
     font-size: 20px;
 }
-input::placeholder {
+.myMainUnderBottom input::placeholder {
     color: #fa63128f;
 }
 
@@ -238,16 +241,7 @@ input::placeholder {
     border-radius: 70px;
     display: flex;
     justify-content: space-between;
-    /* opacity: 0; */
-    animation: animTwo 10s forwards;
-}
-@keyframes animTwo {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    /* opacity: 0; */;
 }
 .myMainTwoAnim {
     animation: animMainTwo 2.5s forwards;
@@ -310,12 +304,29 @@ input::placeholder {
 }
 .myMainThree {
     width: 100%;
-    margin-top: 130px;
+    margin-top: 160px;
     display: flex;
     justify-content: space-between;
 }
 .myMainThreeLeft {
-    width: 640px;
+    width: 640px;;
+}
+.myMainThreeLeftAnim {
+    animation: animMainThree 2.5s forwards;
+}
+@keyframes animMainThree {
+    0% {
+        transform: translateY(500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .myMainThreeRight {
     width: 640px;
@@ -373,8 +384,220 @@ input::placeholder {
     width: 320px;
     height: 206px;
 }
+.about {
+    display: none;
+}
 
+.myMainFour {
+    margin-top: 170px;
+}
+.products {
+    display: flex;
+    margin-left: 20rem;
+    margin-bottom: 2rem;
+}
+.productsMiddle h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 0.8;
+    color: #EEEEEE;
+}
+.productsMiddle {
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.productsLeft img, .productsRight img {
+    width: 70px;
+}
+.productsRight img {
+    margin-top: 0.2rem;
+}
+.myMainFourHouses {
+    display: flex;
+    height: 30rem;
+}
+.imgTwo {
+    margin-right: 1rem;
+    flex: 3;
+    border-radius: 32px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+.myMainFourHouses .imgTwo:hover {
+    flex: 8;
+    .count {
+        display: block;
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 20px;
+        color: #EEEEEE;
+    };
+    .nameHouse {
+        display: block;
+        color: #EEEEEE;
+        margin-top: 20rem;
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+}
+.nameHouse {
+    display: none;
+}
+.count {
+    display: none;
+}
 
+.myMainFive {
+    width: 91.9rem;
+    height: 284px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+}
+.discount {
+    position: relative;
+    width: 305px;
+    height: 185px;
+    background-color: #FA6312;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+.discount:hover {
+    height: 335px;
+}
+.dOne {
+    width: 385px;
+}
+.dLeft {
+    margin-left: 15px;
+}
+.dRight {
+    margin-right: 15px;
+}
+.discount img {
+    width: 247px;
+}
+.discountImgOne {
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: 260px;
+}
+.discountImgTwo {
+    margin: auto;
+    margin-top: -45px;
+    margin-bottom: 260px;
+}
+.discountImgThree {
+    margin: auto;
+    margin-top: -120px;
+    margin-bottom: 200px;
+}
+.discountImgFour {
+    margin: auto;
+    margin-top: -50px;
+    margin-bottom: 260px;
+}
+.discountImgOne img {
+    width: 350px;
+}
+.discountImgTwo img {
+    width: 250px;
+}
+.discountImgThree img {
+    width: 290px;
+}
+.discountImgFour img {
+    width: 290px;
+}
+.discount p {
+    font-weight: 600;
+}
+
+.content {
+    position: relative;
+    color: #EEEEEE;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: -200px;
+    display: none;
+}
+.discount:hover .content {
+    display: block;
+    transition-delay: 0.3s;
+}
+
+.myMainSix {
+    margin-top: 150px;
+}
+.myMainSixTop h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #EEEEEE;
+}
+h2 span {
+    color: #FA6312;
+}
+.myMainSixBottom input  {
+    background-color: black;
+    border: 3.3px solid #EEEEEE;
+    padding: 13px;
+    border-radius: 13px;
+    margin-right: 30px;
+    font-size: 1.2rem;
+    color: #EEEEEE;
+    font-weight: 600;
+}
+.myMainSixBottom {
+    margin-top: 50px;
+}
+.myMainSixBottom button {
+    background-color: #FA6312;
+    border: 3.3px solid #FA6312;
+    padding: 13px;
+    width: 280px;
+    margin-left: 25px;
+    border-radius: 13px;
+    font-size: 1.2rem;
+    color: #EEEEEE;
+    font-weight: 600;
+}
+
+.myMainSeven {
+    margin-top: 150px;
+}
+.myMainSevenTop h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #EEEEEE;
+}
+.myMainSevenBottomLeft img, .myMainSevenBottomMiddle img, .myMainSevenBottomRight img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.myMainSevenBottom p {
+    color: #EEEEEE;
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+.myMainSevenBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.myMainSevenBottomLeft, .myMainSevenBottomMiddle, .myMainSevenBottomRight {
+    display: flex;
+    justify-content: space-around;
+}
 
 @media (min-width: 1200px) and (max-width: 1399px) {
     .myImg .mars {
@@ -527,32 +750,61 @@ input::placeholder {
         margin-left: -300%;
     }
 
-    .myMainThreeRightTop {
-        display: wrap;
-        flex-wrap: wrap;
-    }
-    .myMainThreeRightBottom {
-        display: wrap;
-        flex-wrap: wrap;
+    .myMainThree {
+        display: flex;
+        margin-top: 3rem;
+        margin-left: 10%;
     }
     .marsTwo {
-        width: 30rem;
-    }
-    .myMainThreeLeft {
-        width: 600px;
+        width: 31rem;
     }
     .myMainThreeRight {
-        margin-left: -150px;
+        margin-top: 10px;
+        margin-left: 15px;
     }
-    .myMainThreeRightTopLeft {
-        width: 300px;
-        height: 180px;
+    .myMainThreeRightTop {
+        display: block;
     }
-    .myMainThreeRight {
-        width: 600px;
-        margin-top: -30px;
+    .myMainThreeRightTopLeftTop, .myMainThreeRightTopRightTop, .myMainThreeRightBottomLeftTop {
+        padding-left: 190px;
+        padding-top: 15px;
+    }
+    .myMainThreeRightTopLeftTop img, .myMainThreeRightTopRightTop img, .myMainThreeRightBottomLeftTop img {
+        width: 40px;
+        margin-top: -4px;
+    }
+    .myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2 {
+        font-size: 3.4rem;
+        margin-top: -20px;
+    }
+    .myMainThreeRightBottom {
+        display: block;
+    }
+    .myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
+        width: 260px;
+        height: 156px;
+    }
+    .myMainThreeRightBottomRight {
+        display: none;
+    }
+    .about {
+        display: block;
+        margin-left: 21rem;
+        margin-top: 10rem;
+    }
+    .none-two {
+        font-size: 4.2rem;
+        font-weight: 600;
+        line-height: 0.6;
+        margin-left: 6%;
+        margin-top: 40px;
+        color: #EEEEEE;
+    }
+    .none-two span {
+        color: #FA6312;
     }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
     .myHeader {
         margin-left: 6%;
@@ -662,6 +914,62 @@ input::placeholder {
         margin-top: -4%;
         margin-left: 17%;
     }
+
+    .myMainThree {
+        display: block;
+        margin-top: 3rem;
+        margin-left: 10%;
+    }
+    .marsTwo {
+        width: 31rem;
+        margin-left: 5rem;
+    }
+    .myMainThreeRight {
+        display: flex;
+        margin-top: 10px;
+        margin-left: -3.4rem;
+    }
+    .myMainThreeRightTop {
+        display: flex;
+    }
+    .myMainThreeRightTopLeftTop, .myMainThreeRightTopRightTop, .myMainThreeRightBottomLeftTop {
+        padding-left: 190px;
+        padding-top: 15px;
+    }
+    .myMainThreeRightTopLeftTop img, .myMainThreeRightTopRightTop img, .myMainThreeRightBottomLeftTop img {
+        width: 40px;
+        margin-top: -4px;
+    }
+    .myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2 {
+        font-size: 3.4rem;
+        margin-top: -20px;
+    }
+    .myMainThreeRightBottom {
+        display: flex;
+    }
+    .myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
+        width: 220px;
+        height: 156px;
+    }
+    .myMainThreeRightBottomRight {
+        display: none;
+    }
+    .about {
+        display: block;
+        margin-left: 16rem;
+        margin-top: 10rem;
+    }
+    .none-two {
+        font-size: 4.2rem;
+        font-weight: 600;
+        line-height: 0.6;
+        margin-left: 6%;
+        margin-top: 40px;
+        color: #EEEEEE;
+    }
+    .none-two span {
+        color: #FA6312;
+    }
 }
 @media (min-width: 576px) and (max-width: 767px) {
     .myHeader {
@@ -756,7 +1064,6 @@ input::placeholder {
     }
 
     .myMainTwo {
-        width: 1000px;
         height: 75rem;
         flex-wrap: wrap;
         margin-left: 30%;

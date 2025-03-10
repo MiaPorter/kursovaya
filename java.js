@@ -50,6 +50,25 @@ let observer = new IntersectionObserver(entries => {
   });
   observer.observe(document.querySelector('.myMainTwo'));
 
+  let observerTwo = new IntersectionObserver(entriesTwo => {
+    entriesTwo.forEach(entryTwo => {
+      if (entryTwo.isIntersecting) {
+        entryTwo.target.classList.add('myMainThreeLeftAnim');
+      }
+    });
+  });
+  observerTwo.observe(document.querySelector('.myMainThreeLeft'));
+
+let applicantForm = document.getElementById('applHome')
+applicantForm.addEventListener('submit', appForm)
+
+function appForm(event) {
+    // Просим форму не отправлять данные самостоятельно
+    event.preventDefault()
+    window.location.href = "thanks.html"
+  }
+  
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     let myMainTwo = document.querySelectorAll('.myMainTwo');
 //     function checkBlocksVisibility() {
