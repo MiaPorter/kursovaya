@@ -146,7 +146,7 @@ body {
     color: #EEEEEE;
     position: absolute;
     top: 290px;
-    margin-left: 180px;
+    margin-left: 110px;
 }
 .textOne span, .textTwo span, .myMainUnderTop span {
     color: #FA6312;
@@ -710,7 +710,7 @@ h2 span {
     }
     .myMainOneMiddle .textOne {
         font-size: 4rem;
-        margin-left: 8%;
+        margin-left: 1%;
     }
     .myMainOneMiddle .textTwo {
         font-size: 4rem;
@@ -779,6 +779,9 @@ h2 span {
         font-size: 4rem;
         font-weight: 600;
         line-height: 0.8;
+    }
+    .myMainTwoBlockLeft .dark {
+        width: 800px;
     }
     .hTwoOrange {
         color: #FA6312;
@@ -874,7 +877,7 @@ h2 span {
     }
     .products {
         display: flex;
-        margin-left: 9rem;
+        margin-left: 6rem;
         margin-bottom: 2rem;
     }
     .productsMiddle h2 {
@@ -1034,7 +1037,7 @@ h2 span {
         margin-left: 6%;
     }
     .myHeader a {
-        font-size: 0.84rem;
+        font-size: 1rem;
     }
     .headerLeft {
         width: 37%;
@@ -1047,6 +1050,8 @@ h2 span {
         height: 40px;
         padding-top: 7px;
         border-radius: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .languageButton {
         width: 40px;
@@ -1058,12 +1063,12 @@ h2 span {
     }
     .myMainOneMiddle .textOne {
         width: 800px;
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-left: -2%;
     }
     .myMainOneMiddle .textTwo {
-        font-size: 4rem;
-        margin-left: 23%;
+        font-size: 3.5rem;
+        margin-left: 29%;
     }
     .myMainOneLeft {
         display: none;
@@ -1101,7 +1106,7 @@ h2 span {
     }
 
     .myMainTwo {
-        height: 62rem;
+        height: 64rem;
         flex-wrap: wrap;
         margin-left: 7%;
     }
@@ -1115,10 +1120,10 @@ h2 span {
         line-height: 0.8;
     }
     .dark {
-        margin-left: -40%;
+        margin-left: -20%;
     }
     .textP {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 600;
         margin-left: -3%;
     }
@@ -1174,14 +1179,14 @@ h2 span {
     }
     .myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
         width: 220px;
-        height: 156px;
+        height: 180px;
     }
     .myMainThreeRightBottomRight {
         display: none;
     }
     .about {
         display: block;
-        margin-left: 16rem;
+        margin-left: 13rem;
         margin-top: 10rem;
     }
     .none-two {
@@ -1206,7 +1211,7 @@ h2 span {
         margin-bottom: 2rem;
     }
     .productsMiddle h2 {
-        font-size: 4rem;
+        font-size: 3.3rem;
         font-weight: 600;
         line-height: 0.8;
         color: #EEEEEE;
@@ -1314,6 +1319,9 @@ h2 span {
         transition-delay: 0.3s;
     }
 
+    .myMainSixTop h2 {
+        font-size: 3.2rem;
+    }
     .myMainSixBottom input  {
         background-color: black;
         border: 3.3px solid #EEEEEE;
@@ -1337,7 +1345,7 @@ h2 span {
         width: 170px;
         margin-left: 3px;
         border-radius: 13px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: #EEEEEE;
         font-weight: 600;
     }
@@ -1804,15 +1812,15 @@ h2 span {
     }
     .myMainOneMiddle .textOne {
         width: 1000px;
-        font-size: 5rem;
+        font-size: 4rem;
         top: 310px;
-        margin-left: 30%;
+        margin-left: 40%;
     }
     .myMainOneMiddle .textTwo {
         width: 1000px;
-        font-size: 5rem;
+        font-size: 4rem;
         top: 410px;
-        margin-left: 100%;
+        margin-left: 120%;
     }
     .myMainOneLeft {
         display: none;
@@ -1858,10 +1866,13 @@ h2 span {
     .myMainUnderSale h5, .myMainUnderSale .timer {
         font-size: 2rem;
     }
+    .myMainUnderSale .timer {
+        margin-top: -4px;
+    }
 
     .myMainTwo {
         width: 1000px;
-        height: 75rem;
+        height: 79rem;
         flex-wrap: wrap;
         margin-left: 30%;
         margin-top: 60%;
@@ -1876,10 +1887,13 @@ h2 span {
         line-height: 0.8;
     }
     .dark {
-        margin-left: -30%;
+        margin-left: -20%;
+    }
+    .hTwoOrange {
+        margin-left: 20%;
     }
     .textP {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         font-weight: 600;
         margin-left: -3%;
     }
@@ -1936,15 +1950,15 @@ h2 span {
     }
     .myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
         width: 220px;
-        height: 156px;
+        height: 180px;
     }
     .myMainThreeRightBottomRight {
         display: none;
     }
     .about {
-        width: 100%;
+        width: 600px;
         display: block;
-        margin-left: 30rem;
+        margin-left: 24rem;
         margin-top: 10rem;
     }
     .none-two {
@@ -1967,9 +1981,10 @@ h2 span {
         display: flex;
         margin-left: 17rem;
         margin-bottom: 2rem;
+        width: 700px;
     }
     .productsMiddle h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 600;
         line-height: 0.8;
         color: #EEEEEE;
@@ -2087,7 +2102,7 @@ h2 span {
 
     .myMainSix {
         width: 800px;
-        margin-left: 160px;
+        margin-left: 130px;
     }
     .myMainSixBottom input  {
         background-color: black;
@@ -2101,7 +2116,7 @@ h2 span {
         width: 180px;
     }
     .myMainSixTop h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 600;
         color: #EEEEEE;
         margin-left: 2rem;

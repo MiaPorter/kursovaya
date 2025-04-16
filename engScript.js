@@ -50,7 +50,7 @@ let applicantForm = document.getElementById('applHome')
 applicantForm.addEventListener('submit', function appForm(event) {
   // Просим форму не отправлять данные самостоятельно
   event.preventDefault()
-  window.location.href = "thanks.html"
+  window.location.href = "engThanks.html"
 });
   
 // let btn = document.getElementById('#btn');

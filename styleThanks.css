@@ -10,29 +10,12 @@ body {
     font-style: normal;
 }
 
-button {
-    background-color: #FA6312;
-    border: 3.3px solid #FA6312;
-    padding: 10px;
-    width: 150px;
-    margin-left: 25px;
-    border-radius: 33px;
-    font-size: 1.2rem;
-    color: #EEEEEE;
-    font-weight: 600;
-    margin-top: 30px;
-}
-
-.myMainThanks {
+/*.myMainThanks {
     height: 400px;
     margin-top: 10px;
 }
 .myMainThanksImg {
     margin-top: 70px;
-}
-.myMainThanksImg img {
-    width: 200px;
-    margin-left: 130px;
 }
 h2 {
     font-size: 3rem;
@@ -49,4 +32,29 @@ p {
     color: #EEEEEE;
     text-align: center;
     margin-top: 20px;
+} */
+
+button {
+    background-color: #FA6312;
+    border: 3.3px solid #FA6312;
+    padding: 10px;
+    width: 150px;
+    margin-left: 25px;
+    border-radius: 33px;
+    font-size: 1.2rem;
+    color: #EEEEEE;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.myMainThanksTop img {
+    width: 200px;
+}
+.myMainThanksBottom h2 {
+    color: #EEEEEE;
+}
+.myMainThanksBottom h2 span {
+    color: #FA6312;
+}
+.myMainThanksBottom p {
+    color: #EEEEEE;
 }
