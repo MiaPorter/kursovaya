@@ -126,7 +126,24 @@ let randomImg = function (size) {
 	return Math.floor(Math.random() * size); //генерирует случайное число от 0 до 1 и умножает на size. затем округляет это число вниз до ближайшего целого
 }
 
-let width = 1300; //ширина страницы вашего сайта
+// let width = 1300; //ширина страницы вашего сайта
+// let height = 4000; //высота страницы вашего сайта
+
+// let target = {
+// 	x:randomImg(width), //диапазон от 0 до 1299
+// 	y:randomImg(height) //от 0 до 3999
+// }
+
+// let image = '<img src="img/alienSale.png" alt="">';
+// let imageElement = $(image); //создание элемента изображения из строки выше
+// imageElement.css({
+// 	position: "absolute",
+// 	left: target.x,
+// 	top: target.y
+// })
+// $("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
+
+let width = 1200; //ширина страницы вашего сайта
 let height = 4000; //высота страницы вашего сайта
 
 let target = {
@@ -134,11 +151,116 @@ let target = {
 	y:randomImg(height) //от 0 до 3999
 }
 
-let image = '<img src="img/alienSale.png" alt="">';
-let imageElement = $(image); //создание элемента изображения из строки выше
+// let image = '<img src="img/alienSale.png" alt="">';
+// let imageElement = $(image); //создание элемента изображения из строки выше
+// imageElement.css({
+// 	position: "absolute",
+// 	left: target.x,
+// 	top: target.y
+// })
+// $("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
+
+let image = '<img src="img/alienSale.png" alt="Скидка 10%" class="alienSale">';
+let imageElement = $(image);
 imageElement.css({
-	position: "absolute",
-	left: target.x,
-	top: target.y
-})
-$("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
+  position: "absolute",
+  left: target.x,
+  top: target.y,
+  cursor: "pointer" // Указатель курсора при наведении
+});
+
+// Создаем модальное окно (скрытое)
+let modal = $(`
+  <div id="discountModal" style="
+    display: flex;
+    position: fixed;
+    z-index: 2000;
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(76, 29, 17, 0.5);
+    align-items: center;
+    justify-content: center;
+  ">
+    <div style="
+      background-color:  #FA6312;
+      padding: 20px;
+      border-radius: 30px;
+      min-width: 600px;
+      max-width: 90%;
+      min-height: 400px;
+      max-height: 50%;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    ">
+      <h2 style="
+        width: 400px;
+        color: #eae2dd;
+        font-size: 34px;
+        line-height: 1.5;
+        margin-left: 10px;
+        ">You got: 10% discount on the purchase of any plot!
+      </h2>
+      <button id="closeModal" style="
+        background-color: #FA6312;
+        border: none;
+        border-radius: 20px;
+        padding: 6px 5px 5px 5px;
+        width: 60px;
+        height: 50px;
+        font-size: 15px;
+        position:absolute; 
+        top:10px; 
+        right:10px; 
+        cursor:pointer;
+        color: #eae2dd;
+        button:active {
+          top: 3px;
+          box-shadow: 0 2px 0px #933d0f;
+        } 
+        ">X
+      </button>
+      <button id="getSale" style="
+        background-color: #eae2dd;
+        border: none;
+        border-radius: 20px;
+        padding: 11px 13px 13px 13px;
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+        margin-top: 100px;
+        margin-left: 10px;
+        font-weight: 600;
+        color:rgb(201, 46, 25);
+        ">Receive
+      </button>
+      <img src="img/alienSaleFace.png" alt="" style="
+      width: 400px;
+      margin-top: -250px;
+      margin-left: 50px;
+      ">
+    </div>
+  </div>`
+);
+
+// Добавляем модальное окно в тело документа
+$("body").append(modal);
+
+// Обработчик клика по изображению - показать модалку
+imageElement.on('click', function() {
+  modal.css("display", "flex");
+});
+
+// Закрытие модалки по кнопке
+modal.find("#closeModal").on('click', function() {
+  modal.css("display", "none");
+  imageElement.css("display", "none");
+});
+modal.find("#getSale").on('click', function() {
+  modal.css("display", "none");
+  imageElement.css("display", "none");
+});
+
+// Добавляем изображение в тело документа
+$("body").append(imageElement);

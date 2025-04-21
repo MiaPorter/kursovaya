@@ -11,25 +11,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container myHeader fixed-top col-xl-10 col-lg-12">
         <div class="headerLeft">
-            <a class="none color" href="#myElement">О станции</a>
-            <a class="none color" href="#myMainThree">О нас</a>
-            <a class="none color" href="#myMainFour">Продукция</a>
+            <a class="none color" href="#myElement">О НАС</a>
+            <a class="none color ml-4" href="#myMainThree">ПРЕИМУЩЕСТВА</a>
+            <a class="none color ml-4" href="#myMainFour">ПРОДУКЦИЯ</a>
         </div>
         <div class="headerMiddle">
             <a href="index.html"><img src="img/icon.png" alt=""></a>
         </div>
         <div class="headerRight">
-            <a class="none color" href="#myMainSeven">Связь</a>
-            <div class="orangeButton"><a href="#myMainSix">Оставить заявку</a></div>
-            <div class="languageButton"><a href="engIndex.html">RU</a></div>
+            <a class="none color" href="#myMainSeven">СВЯЗЬ</a>
+            <div class="orangeButton"><a href="#myMainSix">ОСТАВИТЬ ЗАЯВКУ</a></div>
+            <button class="menuBurger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="img/menuBurger.png" alt=""></button>
         </div>
     </div>
-    <div class="myMainOneAll">
+
+    <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Навигация</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myMainOneAll">Главная</a>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myElement">О нас</a>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myMainThree">Преимущества</a>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myMainFour">Продукция</a>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myMainFive">Скидки</a>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myMainSeven">Связь</a>
+        </div>
+        <div class="offcanvas-body">
+            <a href="#myMainSix">Заявка</a>
+        </div>
+    </div>
+
+    <div class="myMainOneAll" id="myMainOneAll">
         <div class="myMainOne container col-xl-12">
         <div class="myImg w-100">
-            <img class="mars" width="800px" src="img/mars.png">
+            <img class="mars" width="800px" src="img/marsTwo.png">
         </div>
         <div class="myMainIn">
             <div class="myMainOneLeft">
@@ -68,17 +98,16 @@
         </div>
     </div>
     </div>
-    
 
     <div class="myMainTwo container col-xl-12" id="myElement">
         <div class="myMainTwoBlockLeft">
-            <h2 class="dark">ЧТО ЗА</h2>
-            <h2 class="hTwoOrange">СТАНЦИЯ?</h2>
+            <h2 class="dark">О <span>НАС</span></h2>
             <div class="textP">
                 <p>
                     Одним из главных причин в создании имени станции являлся Маринер-9, который стал первым искусственным спутником планеты и впервые произвёл фотографирование поверхности Марса с разрешением в несколько сотен метров. <br> <br>
                     Маринер - первый и единственный в своем роде дом вне планеты Земля, обустроенный для самого долгого и удобного образа жизни.
                 </p>
+                <a href="#myMainFour" class="findHome">Список участков</a>
                 <div class="starOne container">
                     <img class="myStarOne" src="img/starsOne.png" alt="">
                 </div>  
@@ -114,10 +143,9 @@
         </div>
     </div>
 
-    <div class="about">
-        <h2 class="none-two">О <span>НАС</span> </h2>
+    <div class="about" id="about">
+        <h2 class="none-two">ПРЕИМУ<span>ЩЕСТВА</span> </h2>
     </div>
-
     <div class="myMainThree container col-xl-12" id="myMainThree">
         <div class="myMainThreeLeft">
             <img class="marsTwo" width="600rem" src="img/stationMap.png" alt="">
@@ -148,14 +176,14 @@
                     <div class="myMainThreeRightBottomLeftTop">
                         <img src="img/homeIcon.png" alt="">
                     </div>
-                    <div class="myMainThreeRightTopRightBottom">
-                        <h2>+1 млн.</h2>
-                        <p>участков</p>
+                    <div class="myMainThreeRightBottomRightBottom">
+                        <a href="#myMainSix" class="aTop">+1 млн.</a>
+                        <a href="#myMainSix" class="aBottom">участков</a>
                     </div>
                 </div>
                 <div class="myMainThreeRightBottomRight">
-                    <h2 class="white">О</h2>
-                    <h2 class="oran">НАС</h2>
+                    <h2 class="white">ПРЕИМУ</h2>
+                    <h2 class="oran">ЩЕСТВА</h2>
                 </div>
             </div>
         </div>
@@ -197,10 +225,11 @@
         </div>    
     </div>
 
-    <div class="myMainFive">
+    <div class="myMainFive" id="myMainFive">
         <div class="discount dOne dLeft">
             <div class="discountImgOne">
                 <img src="img/ufo.png" alt="">
+                <h2>Покупка</h2>
             </div>
             <div class="content">
                 <p>Скидки в 10% при покупке домов от 500 млн. рублей только до 21 августа</p>
@@ -209,6 +238,7 @@
         <div class="discount">
             <div class="discountImgTwo">
                 <img src="img/bus.png" alt="">
+                <h2>Экскурсии</h2>
             </div>
             <div class="content">
                 <p>При покупке дома экскурсия до Олимпа в подарок</p>
@@ -217,6 +247,7 @@
         <div class="discount">
             <div class="discountImgThree">
                 <img src="img/sofa.png" alt="">
+                <h2>Мебель</h2>
             </div>
             <div class="content">
                 <p>Перевозка мебели в приобретенный дом бесплатно</p>
@@ -225,6 +256,7 @@
         <div class="discount dOne dRight">
             <div class="discountImgFour">
                 <img src="img/garden.png" alt="">
+                <h2>Участок</h2>
             </div>
             <div class="content">
                 <p>До 11 марта скидка 20% на участок с садом и огородом</p>
@@ -238,9 +270,9 @@
         </div>
         <div class="myMainSixBottom">
             <form id="applHome" action="">
-                <input type="text" required placeholder="Ваше имя">
-                <input type="email" placeholder="Your email" required>
-                <input type="text" placeholder="Ваш телефон" required>
+                <input type="text" required placeholder="Ваше имя" class="no-paste">
+                <input type="email" placeholder="Ваша почта" required class="no-paste">
+                <input type="text" placeholder="Ваш телефон" required class="no-paste">
                 <button type="submit">Отправить</button>
             </form>
         </div>
@@ -261,27 +293,29 @@
             </div>
             <div class="myMainSevenBottomRight col-xl-3 col-lg-6 col-sm-5">
                 <img src="img/meIcon.png" alt="">
-                <p>ИП Сергиенко</p>
+                <p>ул. Марс 3</p>
             </div>
         </div>
         <div class="myMainSevenBottomTwo row-xl row-lg row-sm">
             <div class="myMainSevenBottomRightTwo col-xl-3 col-lg-4 col-sm-5">
                 <img src="img/meIcon.png" alt="">
-                <p>ИП Сергиенко</p>
+                <p>ул. Марс 3</p>
             </div>
         </div>
+        <div class="myMainSevenBottomAuthor container col-xl-12 col-lg-12">
+            <p>2025 © Дарья Сергиенко</p>
+        </div>
     </div>
-
-    <div class="discountModal">
-        <div></div>
-		<h2>Скидка 10%</h2>
-        <button id="closeModal">Х</button>
+    <div class="scrollToTop" id="scrollToTop">
+        <img src="img/rowUp.png" alt="Наверх" width="40">
     </div>
 
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="https://js.cx/libs/animate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="java.js"></script>
+
+    
     
 </body>
 </html>

@@ -5,6 +5,9 @@
 
 body {
     background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Растягивает изображение на всю доступную область */
+    background-attachment: fixed;
     font-family: "Montserrat Alternates", serif;
     font-weight: 500;
     font-style: normal;
@@ -22,15 +25,15 @@ body {
 @keyframes animHeader {
     0% {
         backdrop-filter: blur(0px);
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(26, 22, 48, 0);
     }
     50% {
         backdrop-filter: blur(5px);
-        background-color: rgba(0, 0, 0, 0.119);
+        background-color: rgba(19, 16, 38, 0.119);
     }
     100% {
         backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.296);
+        background-color: rgba(17, 13, 30, 0.296);
     }
 }
 .myHeader a {
@@ -40,7 +43,7 @@ body {
 }
 .headerLeft {
     width: 500px;
-    margin-right: -100px;
+    margin-right: -90px;
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
@@ -51,6 +54,13 @@ body {
 .headerMiddle {
     width: 80px;
     margin-top: -14px;
+}
+.headerMiddle a img {
+    width: 200px;
+    transition: transform 0.3s ease; /* Плавное изменение */
+}
+.headerMiddle a:hover img {
+    transform: scale(1.05); /* Увеличение на 5% при наведении */
 }
 .headerRight {
     width: 500px;
@@ -75,7 +85,8 @@ body {
     top: 3px;
     box-shadow: 0 2px 0px #933d0f;
 }
-.languageButton {
+.menuBurger {
+    background-color: none;
     width: 53px;
     height: 50px;
     margin-top: -10px;
@@ -87,9 +98,13 @@ body {
     position: relative;
     top: 0px;
 }
-.languageButton:active {
+.menuBurger:active {
     top: 3px;
     box-shadow: 0 2px 0px #7a7a7a;
+}
+.menuBurger img {
+    width: 40px;
+    margin-top: -6px;
 }
 .headerLeft a:after, .headerRight .color:after {
     content: "";
@@ -101,6 +116,10 @@ body {
 }
 .headerLeft a:hover:after, .headerRight .color:hover:after {
     width: 100%;
+}
+.offcanvas-body a {
+    color: #eae2dd;
+    text-decoration: none;
 }
 
 .myMainOneAll {
@@ -136,7 +155,6 @@ body {
 .myMainOne .mars {
     position: relative;
     margin-left: 240px;
-    margin-top: 20px;
     animation: ani 10s forwards infinite linear
     rotate 10s forwards;
 }
@@ -250,14 +268,12 @@ body {
 .myMainUnderBottom input::placeholder {
     color: #fa63128f;
 }
-
 .myMainUnderSale {
     height: 70px;
     display: flex;
     justify-content: center;
     position: absolute;
     top: 760px;
-    background-color: black;
 }
 .myMainUnderSale h5 {
     color: #FA6312;
@@ -271,7 +287,6 @@ body {
     margin-left: 10px;
     color: #FA6312;
 }
-  
 .timerDays::before, .timerHours::before, .timerMinutes::before, .timerSeconds::before {
     content: "";
 }
@@ -311,18 +326,36 @@ body {
     font-weight: 600;
     line-height: 0.8;
 }
-.hTwoOrange {
-    color: #FA6312;
-    margin-left: 5rem;
+.dark {
     margin-bottom: 2rem;
+}
+.dark span {
+    color: #FA6312;
 }
 .textP {
     font-size: 20px;
     font-weight: 600;
 }
+.findHome {
+    height: 90px;
+    background-color: #FA6312;
+    border-radius: 15px;
+    padding: 16px 43px 16px 43px;
+    transition-duration: 0.1s;
+    text-decoration: none;
+    box-shadow: 0 7px 0px #933d0f;
+    position: relative;
+    top: 20px;
+    color: #eae2dd;
+}
+.findHome:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #933d0f;
+}
+
 .myStarOne {
     margin-left: -30%;
-    margin-top: -30%;
+    margin-top: -25%;
     transform: rotate(350deg);
     z-index: 999;
     width: 10rem;
@@ -343,8 +376,10 @@ body {
 .myVector {
     margin-left: -300%;
 }
+
 .myMainThree {
     width: 100%;
+    margin: auto;
     margin-top: 260px;
     display: flex;
     justify-content: space-between;
@@ -384,20 +419,29 @@ body {
 .myMainThreeRightTopLeftTop img, .myMainThreeRightTopRightTop img, .myMainThreeRightBottomLeftTop img {
     width: 50px;
 }
-.myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2 {
+.myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2, .myMainThreeRightBottomRightBottom .aTop {
     font-size: 4.1rem;
     text-align: center;
     color: #eae2dd;
     padding-top: 15px;
+    text-decoration: none;
 }
-.myMainThreeRightTopLeftBottom p, .myMainThreeRightTopRightBottom p, .myMainThreeRightBottomLeftTop p {
+.myMainThreeRightBottomRightBottom .aTop {
+    margin-left: 30px;
+    margin-bottom: -400px;
+}
+.myMainThreeRightTopLeftBottom p, .myMainThreeRightTopRightBottom p, .myMainThreeRightBottomLeftTop p, .myMainThreeRightBottomRightBottom .aBottom {
     font-size: 24px;
     text-align: center;
     color: #eae2dd;
     margin-top: -12px;
+    text-decoration: none;
+}
+.myMainThreeRightBottomRightBottom .aBottom {
+    margin-left: 80px;
 }
 .myMainThreeRightBottomRight h2 {
-    font-size: 4.2rem;
+    font-size: 4rem;
     font-weight: 600;
     line-height: 0.6;
     margin-left: 30px;
@@ -413,7 +457,7 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
+.myMainThreeRightTopLeft, .myMainThreeRightTopRight {
     width: 320px;
     height: 206px;
     background-color: #FA6312;
@@ -422,7 +466,19 @@ body {
     margin-left: 25px;
     box-shadow: 0 10px 0px #933d0f;
     position: relative;
-    top: 0px;
+}
+.myMainThreeRightBottomLeft:hover {
+    cursor: pointer;
+}
+.myMainThreeRightBottomLeft {
+    width: 320px;
+    height: 206px;
+    background-color: #cc5414;
+    border-radius: 60px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    box-shadow: 0 10px 0px #682b0a;
+    position: relative;
 }
 .myMainThreeRightTopLeft:active, .myMainThreeRightTopRight:active, .myMainThreeRightBottomLeft:active  {
     top: 3px;
@@ -434,6 +490,11 @@ body {
 }
 .about {
     display: none;
+}
+.buttonMainThree {
+    margin: auto;
+    margin-left: 900px;
+    margin-top: 40px;
 }
 
 .myMainFour {
@@ -527,6 +588,18 @@ body {
 .discount:hover {
     height: 335px;
 }
+.content {
+    position: relative;
+    color: #eae2dd;
+    font-size: 23px;
+    text-align: center;
+    margin-top: -200px;
+    display: none;
+}
+.discount:hover .content {
+    display: block;
+    transition-delay: 0.3s;
+}
 .dOne {
     width: 385px;
 }
@@ -544,20 +617,55 @@ body {
     margin-top: -30px;
     margin-bottom: 260px;
 }
+.discountImgOne h2 {
+    width: 400px;
+    margin-top: 20px;
+    text-align: center;
+    color: #eae2dd;
+    margin-bottom: -40px;
+}
 .discountImgTwo {
     margin: auto;
     margin-top: -45px;
     margin-bottom: 260px;
+}
+.discountImgTwo h2 {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: center;
+    color: #eae2dd;
+    margin-bottom: -30px;
+}
+.discountImgTwo h2 {
+    width: 100px;
+    text-align: center;
 }
 .discountImgThree {
     margin: auto;
     margin-top: -120px;
     margin-bottom: 200px;
 }
+.discountImgThree h2 {
+    width: 100px;
+    margin-top: -60px;
+    margin-left: 80px;
+    text-align: center;
+    color: #eae2dd;
+    margin-bottom: 30px;
+}
 .discountImgFour {
     margin: auto;
     margin-top: -50px;
     margin-bottom: 260px;
+}
+.discountImgFour h2 {
+    width: 100px;
+    margin-top: -3px;
+    margin-left: 80px;
+    text-align: center;
+    color: #eae2dd;
+    margin-bottom: -30px;
 }
 .discountImgOne img {
     width: 350px;
@@ -573,18 +681,6 @@ body {
 }
 .discount p {
     font-weight: 600;
-}
-.content {
-    position: relative;
-    color: #eae2dd;
-    font-size: 23px;
-    text-align: center;
-    margin-top: -200px;
-    display: none;
-}
-.discount:hover .content {
-    display: block;
-    transition-delay: 0.3s;
 }
 
 .myMainSix {
@@ -630,6 +726,7 @@ h2 span {
     box-shadow: 0 2px 0px #933d0f;
 }
 
+
 .myMainSeven {
     margin-top: 150px;
     margin-bottom: 20px;
@@ -667,29 +764,37 @@ h2 span {
 .myMainSevenBottomRight p {
     margin-left: -70px;
 }
-
-.discountModal {
-    display:none;
-	position: fixed;
-	z-index: 1000;
-	left: 0; top: 0; width: 100%; height: 100%;
-	background-color: rgba(0,0,0,0.5);
-	align-items: center;
-	justify-content: center;
+.myMainSevenBottomAuthor p {
+    margin-left: 550px;
+    color: #eae2dd98;
 }
-.discountModal div {
-    background-color: white;
-	padding: 20px;
-	border-radius: 8px;
-	min-width: 200px;
-	text-align:center;
-	position: relative;
+.scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #FA6312;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000;
 }
-.discountModal button {
-    position:absolute; 
-    top:5px; 
-    right:5px; 
-    cursor:pointer;
+.scrollToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.scrollToTop:hover {
+    background-color: #e04e0a;
+    transform: translateY(-3px);
+}
+.scrollToTop:active {
+    transform: translateY(1px);
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -734,6 +839,7 @@ h2 span {
     .languageButton {
         padding-top: 9px;
     }
+
     .myImg .mars {
         margin-left: 6%;
     }
@@ -786,12 +892,22 @@ h2 span {
     .myMainUnderSale {
         height: 80px;
         margin-left: 23%;
-        top: 670px;
+        top: 750px;
+    }
+    .myMainOneLeft {
+        position: absolute;
+        top: 400px;
+        animation: aniLeft 2.5s forwards;
+    }
+    .myMainOneRight {
+        position: absolute;
+        top: 440px;
+        animation: aniRight 2.5s forwards;
     }
 
     .myMainTwo {
         width: 100%;
-        height: 37rem;
+        height: 40rem;
         background-color: #eae2dd;
         border-radius: 70px;
         display: flex;
@@ -818,7 +934,7 @@ h2 span {
     }
     .myStarOne {
         margin-left: -26%;
-        margin-top: -40%;
+        margin-top: -30%;
         transform: rotate(350deg);
         z-index: 999;
         width: 9rem;
@@ -843,7 +959,7 @@ h2 span {
 
     .myMainThree {
         display: flex;
-        margin-top: 3rem;
+        margin-top: 9rem;
         margin-left: 10%;
     }
     .marsTwo {
@@ -856,6 +972,47 @@ h2 span {
     .myMainThreeRightTop {
         display: block;
     }
+    .myMainThreeRightTopLeftBottom p, .myMainThreeRightTopRightBottom p, .myMainThreeRightBottomLeftTop p, .myMainThreeRightBottomRightBottom .aBottom {
+        font-size: 24px;
+        text-align: center;
+        color: #eae2dd;
+        margin-top: -12px;
+        text-decoration: none;
+    }
+    .myMainThreeRightBottomRightBottom .aBottom {
+        margin-left: 80px;
+    }
+    .myMainThreeRightBottomRight h2 {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 0.6;
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+    .myMainThreeRightBottom {
+        display: flex;
+        justify-content: space-around;
+    }
+    .myMainThreeRightTopLeft, .myMainThreeRightTopRight {
+        width: 320px;
+        height: 206px;
+        background-color: #FA6312;
+        border-radius: 60px;
+        margin-bottom: 25px;
+        margin-left: 25px;
+        box-shadow: 0 10px 0px #933d0f;
+        position: relative;
+    }
+    .myMainThreeRightBottomLeft {
+        width: 320px;
+        height: 206px;
+        background-color: #cc5414;
+        border-radius: 60px;
+        margin-bottom: 25px;
+        margin-left: 25px;
+        box-shadow: 0 10px 0px #682b0a;
+        position: relative;
+    }
     .myMainThreeRightTopLeftTop, .myMainThreeRightTopRightTop, .myMainThreeRightBottomLeftTop {
         padding-left: 190px;
         padding-top: 15px;
@@ -864,9 +1021,18 @@ h2 span {
         width: 40px;
         margin-top: -4px;
     }
-    .myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2 {
+    .myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2, .myMainThreeRightBottomRightBottom .aTop {
         font-size: 3.4rem;
         margin-top: -20px;
+    }
+    .myMainThreeRightBottomRightBottom .aBottom {
+        margin-left: 60px;
+    }
+    .myMainThreeRightBottomRightBottom .aBottom {
+        font-size: 24px;
+        text-align: center;
+        color: #eae2dd;
+        text-decoration: none;
     }
     .myMainThreeRightBottom {
         display: block;
@@ -875,12 +1041,15 @@ h2 span {
         width: 260px;
         height: 156px;
     }
+    .myMainThreeRightBottomLeft {
+        height: 166px;
+    }
     .myMainThreeRightBottomRight {
         display: none;
     }
     .about {
         display: block;
-        margin-left: 21rem;
+        margin-left: 9rem;
         margin-top: 10rem;
     }
     .none-two {
@@ -996,6 +1165,37 @@ h2 span {
     .discountImgFour img {
         width: 220px;
     }
+    .discountImgOne h2 {
+        margin-top: 20px;
+        text-align: left;
+        color: #eae2dd;
+        margin-bottom: -40px;
+        margin-left: -100px;
+    }
+    .discountImgTwo h2 {
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 30px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: -30px;
+    }
+    .discountImgThree h2 {
+        width: 100px;
+        margin-top: -60px;
+        margin-left: 80px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: 30px;
+    }
+    .discountImgFour h2 {
+        width: 100px;
+        margin-top: -3px;
+        margin-left: 80px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: -30px;
+    }
 
     .myMainSix {
         margin-top: 150px;
@@ -1042,6 +1242,9 @@ h2 span {
         justify-content: space-around;
         margin-left: -4px;
     }
+    .scrollToTop {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1049,7 +1252,7 @@ h2 span {
         margin-left: 6%;
     }
     .myHeader a {
-        font-size: 0.84rem;
+        font-size: 0.7rem;
     }
     .headerLeft {
         width: 37%;
@@ -1068,6 +1271,7 @@ h2 span {
         height: 40px;
         padding-top: 6px;
     }
+
     .myImg .mars {
         margin-left: -2%;
     }
@@ -1116,7 +1320,7 @@ h2 span {
     }
 
     .myMainTwo {
-        height: 62rem;
+        height: 67rem;
         flex-wrap: wrap;
         margin-left: 7%;
     }
@@ -1130,22 +1334,40 @@ h2 span {
         line-height: 0.8;
     }
     .dark {
-        margin-left: -40%;
+        margin-left: -10%;
     }
     .textP {
         font-size: 1.3rem;
         font-weight: 600;
         margin-left: -3%;
     }
+    .findHome {
+        height: 90px;
+        background-color: #FA6312;
+        border-radius: 15px;
+        padding: 16px 43px 16px 43px;
+        transition-duration: 0.1s;
+        text-decoration: none;
+        box-shadow: 0 7px 0px #933d0f;
+        position: relative;
+        top: 20px;
+        color: #eae2dd;
+        margin-left: 180px;
+    }
+    .findHome:active {
+        top: 3px;
+        box-shadow: 0 2px 0px #933d0f;
+    }
     .myStarOne {
         display: none;
     }
     .myMainTwoBlockRight {
         width: 100%;
+        margin-top: 80px;
     }
     .myStarTwo {
         margin-left: 91%;
-        margin-top: -130%;
+        margin-top: -150%;
         transform: rotate(350deg);
     }
     .carusel {
@@ -1184,19 +1406,27 @@ h2 span {
         font-size: 3.4rem;
         margin-top: -20px;
     }
+    .myMainThreeRightBottomRightBottom .aTop {
+        font-size: 3.1rem;
+        margin-left: 20px;
+    }
+    .myMainThreeRightBottomRightBottom .aBottom {
+        margin-left: 45px;
+    }
     .myMainThreeRightBottom {
         display: flex;
     }
     .myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
         width: 220px;
-        height: 156px;
+        height: 169px;
     }
     .myMainThreeRightBottomRight {
         display: none;
     }
     .about {
+        width: 1000px;
         display: block;
-        margin-left: 16rem;
+        margin-left: 2rem;
         margin-top: 10rem;
     }
     .none-two {
@@ -1328,6 +1558,33 @@ h2 span {
         display: block;
         transition-delay: 0.3s;
     }
+    .discountImgOne h2 {
+        margin-top: 20px;
+        text-align: left;
+        margin-left: 30px;
+        color: #eae2dd;
+        margin-bottom: -40px;
+    }
+    .discountImgTwo h2 {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: #eae2dd;
+        margin-bottom: -30px;
+    }
+    .discountImgThree h2 {
+        margin-top: -30px;
+        margin-left: 35px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: 30px;
+    }
+    .discountImgFour h2 {
+        margin-top: 3px;
+        margin-left: 20px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: -30px;
+    }
 
     .myMainSixBottom input  {
         background-color: black;
@@ -1405,6 +1662,15 @@ h2 span {
         justify-content: space-around;
         margin-left: 16px;
     }
+    .scrollToTop {
+        display: none;
+    }
+    .myMainSevenBottomAuthor {
+        margin-left: -300px;
+    }
+    .myMainSevenBottomAuthor p {
+        width: 600px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767px) {
     .myHeader {
@@ -1440,6 +1706,7 @@ h2 span {
         height: 60px;
         padding-top: 8px;
     }
+
     .myImg .mars {
         width: 900px;
         margin-left: 35%;
@@ -1499,7 +1766,7 @@ h2 span {
     }
 
     .myMainTwo {
-        height: 75rem;
+        height: 80rem;
         flex-wrap: wrap;
         margin-left: 30%;
         margin-top: 35%;
@@ -1520,6 +1787,23 @@ h2 span {
         font-size: 1.7rem;
         font-weight: 600;
         margin-left: -3%;
+    }
+    .findHome {
+        height: 90px;
+        background-color: #FA6312;
+        border-radius: 15px;
+        padding: 16px 43px 16px 43px;
+        transition-duration: 0.1s;
+        text-decoration: none;
+        box-shadow: 0 7px 0px #933d0f;
+        position: relative;
+        top: 20px;
+        color: #eae2dd;
+        margin-left: 180px;
+    }
+    .findHome:active {
+        top: 3px;
+        box-shadow: 0 2px 0px #933d0f;
     }
     .myStarOne {
         display: none;
@@ -1567,6 +1851,9 @@ h2 span {
         font-size: 3.4rem;
         margin-top: -20px;
     }
+    .myMainThreeRightBottomRightBottom .aTop {
+        font-size: 3.1rem;
+    }
     .myMainThreeRightBottom {
         display: flex;
     }
@@ -1578,15 +1865,14 @@ h2 span {
         display: none;
     }
     .about {
+        width: 1200px;
         display: block;
-        margin-left: 16rem;
         margin-top: 10rem;
     }
     .none-two {
         font-size: 4.2rem;
         font-weight: 600;
         line-height: 0.6;
-        margin-left: 6%;
         margin-top: 40px;
         color: #eae2dd;
     }
@@ -1778,6 +2064,15 @@ h2 span {
     .myMainSevenBottomRight {
         margin-left: -23px;
     }
+    .scrollToTop {
+        display: none;
+    }
+    .myMainSevenBottomAuthor {
+        margin-left: -300px;
+    }
+    .myMainSevenBottomAuthor p {
+        width: 600px;
+    }
 }
 @media (min-width: 320px) and (max-width: 576px) {
     .myHeader {
@@ -1813,6 +2108,7 @@ h2 span {
         height: 60px;
         padding-top: 8px;
     }
+    
     .myImg .mars {
         width: 900px;
         margin-left: 44%;
@@ -1876,7 +2172,7 @@ h2 span {
 
     .myMainTwo {
         width: 1000px;
-        height: 75rem;
+        height: 80rem;
         flex-wrap: wrap;
         margin-left: 30%;
         margin-top: 60%;
@@ -1891,18 +2187,36 @@ h2 span {
         line-height: 0.8;
     }
     .dark {
-        margin-left: -30%;
+        margin-left: -10%;
     }
     .textP {
         font-size: 1.7rem;
         font-weight: 600;
         margin-left: -3%;
     }
+    .findHome {
+        height: 90px;
+        background-color: #FA6312;
+        border-radius: 15px;
+        padding: 16px 43px 16px 43px;
+        transition-duration: 0.1s;
+        text-decoration: none;
+        box-shadow: 0 7px 0px #933d0f;
+        position: relative;
+        top: 20px;
+        color: #eae2dd;
+        margin-left: 250px;
+    }
+    .findHome:active {
+        top: 3px;
+        box-shadow: 0 2px 0px #933d0f;
+    }
     .myStarOne {
         display: none;
     }
     .myMainTwoBlockRight {
         width: 100%;
+        margin-top: 30px;
     }
     .myStarTwo {
         margin-left: 93%;
@@ -1914,6 +2228,7 @@ h2 span {
         margin-top: -2%;
         margin-left: 21%;
     }
+
     .myMainThree {
         display: block;
         margin-top: 3rem;
@@ -1924,7 +2239,6 @@ h2 span {
         margin-left: 20rem;
         margin-top: 40px;
     }
-
     .myMainThreeRight {
         display: flex;
         margin-top: 70px;
@@ -1946,12 +2260,18 @@ h2 span {
         font-size: 3.4rem;
         margin-top: -20px;
     }
+    .myMainThreeRightBottomRightBottom .aTop {
+        font-size: 3.1rem;
+    }
+    .myMainThreeRightBottomRightBottom .aBottom {
+        margin-left: 45px;
+    }
     .myMainThreeRightBottom {
         display: flex;
     }
     .myMainThreeRightTopLeft, .myMainThreeRightTopRight, .myMainThreeRightBottomLeft {
         width: 220px;
-        height: 156px;
+        height: 169px;
     }
     .myMainThreeRightBottomRight {
         display: none;
@@ -1959,7 +2279,7 @@ h2 span {
     .about {
         width: 100%;
         display: block;
-        margin-left: 30rem;
+        margin-left: 17rem;
         margin-top: 10rem;
     }
     .none-two {
@@ -1976,7 +2296,7 @@ h2 span {
 
     .myMainFour {
         margin-top: 170px;
-        margin-left: 5vw;
+        margin-left: -1vw;
     }
     .products {
         display: flex;
@@ -2004,7 +2324,6 @@ h2 span {
         display: flex;
         height: 30rem;
         width: 50vw;
-        margin-left: 27rem;
     }
     .imgTwo {
         margin-right: 1rem;
@@ -2099,6 +2418,33 @@ h2 span {
         display: block;
         transition-delay: 0.3s;
     }
+    .discountImgOne h2 {
+        margin-top: 20px;
+        text-align: left;
+        margin-left: 40px;
+        color: #eae2dd;
+        margin-bottom: -40px;
+    }
+    .discountImgTwo h2 {
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #eae2dd;
+        margin-bottom: -30px;
+    }
+    .discountImgThree h2 {
+        margin-top: -30px;
+        margin-left: 40px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: 30px;
+    }
+    .discountImgFour h2 {
+        margin-top: 3px;
+        margin-left: 30px;
+        text-align: center;
+        color: #eae2dd;
+        margin-bottom: -30px;
+    }
 
     .myMainSix {
         width: 800px;
@@ -2152,11 +2498,14 @@ h2 span {
         margin-top: 150px;
         margin-bottom: 20px;
     }
-    .myMainSevenBottomLeft img, .myMainSevenBottomMiddle img, .myMainSevenBottomRight img {
+    .myMainSevenBottomLeft img, .myMainSevenBottomMiddle img {
         width: 50px;
         height: 50px;
         margin-right: 20px;
         margin-left: 20px;
+    }
+    .myMainSevenBottomRight img {
+        margin-right: 80px;
     }
     .myMainSevenBottom p {
         color: #eae2dd;
@@ -2164,15 +2513,24 @@ h2 span {
         padding-top: 10px;
     }
     .myMainSevenBottom {
-        width: 960px;
+        width: 860px;
         display: flex;
         justify-content: space-between;
         margin-top: 40px;
-        margin-left: 100px;
+        margin-left: 140px;
     }
     .myMainSevenBottomLeft, .myMainSevenBottomMiddle, .myMainSevenBottomRight {
         display: flex;
         justify-content: space-around;
+    }
+    .scrollToTop {
+        display: none;
+    }
+    .myMainSevenBottomAuthor {
+        margin-left: -100px;
+    }
+    .myMainSevenBottomAuthor p {
+        width: 600px;
     }
 }
 

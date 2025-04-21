@@ -29,22 +29,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 let observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('myMainTwoAnim');
-      }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('myMainTwoAnim');
+    }
   });
-  observer.observe(document.querySelector('.myMainTwo'));
+});
+observer.observe(document.querySelector('.myMainTwo'));
 
-  let observerTwo = new IntersectionObserver(entriesTwo => {
-    entriesTwo.forEach(entryTwo => {
-      if (entryTwo.isIntersecting) {
-        entryTwo.target.classList.add('myMainThreeLeftAnim');
-      }
-    });
+let observerTwo = new IntersectionObserver(entriesTwo => {
+  entriesTwo.forEach(entryTwo => {
+    if (entryTwo.isIntersecting) {
+      entryTwo.target.classList.add('myMainThreeLeftAnim');
+    }
   });
-  observerTwo.observe(document.querySelector('.myMainThreeLeft'));
+});
+observerTwo.observe(document.querySelector('.myMainThreeLeft'));
 
 let applicantForm = document.getElementById('applHome')
 applicantForm.addEventListener('submit', function appForm(event) {
@@ -75,7 +75,6 @@ function animateOnScroll() {
       }
   });
 }
-
 // CSS класс для анимации
 let style = document.createElement('style');
 style.textContent = `
@@ -89,7 +88,6 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style); //добавляет стиль в код
-
 window.addEventListener('scroll', animateOnScroll); //При каждом скролле будет вызываться функция animateOnScroll
 
 let submitButton = document.querySelector('#applHome button[type="submit"]');
@@ -104,7 +102,6 @@ if (submitButton) {
     submitButton.style.transition = 'transform 1s ease';
 }
 
-// Плавная прокрутка для всех якорных ссылок
 document.querySelectorAll('a[href^="#"]').forEach(link => { // селектор для поиска a - все теги <a>, [href^="#"] - у которых атрибут href начинается с #
   link.addEventListener('click', function(event) {
     // Отменяем стандартное поведение
@@ -121,75 +118,162 @@ document.querySelectorAll('a[href^="#"]').forEach(link => { // селектор 
     }
   });
 });
+
 //принимает аргумент (size) и возвращает случайное целое число от 0 до size - 1
 let randomImg = function (size) {
 	return Math.floor(Math.random() * size); //генерирует случайное число от 0 до 1 и умножает на size. затем округляет это число вниз до ближайшего целого
 }
-
-let width = 1300; //ширина страницы вашего сайта
+let width = 1200; //ширина страницы вашего сайта
 let height = 4000; //высота страницы вашего сайта
-
 let target = {
 	x:randomImg(width), //диапазон от 0 до 1299
 	y:randomImg(height) //от 0 до 3999
 }
-
-// let image = '<img src="img/alienSale.png" alt="">';
-// let imageElement = $(image); //создание элемента изображения из строки выше
-// imageElement.css({
-// 	position: "absolute",
-// 	left: target.x,
-// 	top: target.y
-// })
-// $("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
-
 let image = '<img src="img/alienSale.png" alt="Скидка 10%" class="alienSale">';
 let imageElement = $(image);
 imageElement.css({
-	position: "absolute",
-	left: target.x,
-	top: target.y,
-	cursor: "pointer" // Указатель курсора при наведении
+  position: "absolute",
+  left: target.x,
+  top: target.y,
+  cursor: "pointer" // Указатель курсора при наведении
 });
-
 // Создаем модальное окно (скрытое)
 let modal = $(`
-	<div id="discountModal" style="
-		display:none;
-		position: fixed;
-		z-index: 1000;
-		left: 0; top: 0; width: 100%; height: 100%;
-		background-color: rgba(0,0,0,0.5);
-		align-items: center;
-		justify-content: center;
-	">
-		<div style="
-			background-color: white;
-			padding: 20px;
-			border-radius: 8px;
-			min-width: 200px;
-			text-align:center;
-			position: relative;
-		">
-			<h2>Скидка 10%</h2>
-			<button id="closeModal" style="
-				position:absolute; top:5px; right:5px; cursor:pointer;">×</button>
-		</div>
-	</div>
-`);
-
+  <div id="discountModal" style="
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(76, 29, 17, 0.5);
+    align-items: center;
+    justify-content: center;
+  ">
+    <div style="
+      background-color:  #FA6312;
+      padding: 20px;
+      border-radius: 30px;
+      min-width: 600px;
+      max-width: 90%;
+      min-height: 400px;
+      max-height: 50%;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    ">
+      <h2 style="
+        width: 500px;
+        color: #eae2dd;
+        font-size: 34px;
+        line-height: 1.5;
+        margin-left: 10px;
+        ">Вам выпало: Скидка 10% на покупку любого участка!
+      </h2>
+      <button id="closeModal" style="
+        background-color: #FA6312;
+        border: none;
+        border-radius: 20px;
+        padding: 6px 5px 5px 5px;
+        width: 60px;
+        height: 50px;
+        font-size: 15px;
+        position:absolute; 
+        top:10px; 
+        right:10px; 
+        cursor:pointer;
+        color: #eae2dd;
+        button:active {
+          top: 3px;
+          box-shadow: 0 2px 0px #933d0f;
+        } 
+        ">X
+      </button>
+      <button id="getSale" style="
+        background-color: #eae2dd;
+        border: none;
+        border-radius: 20px;
+        padding: 11px 13px 13px 13px;
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+        margin-top: 100px;
+        margin-left: 10px;
+        font-weight: 600;
+        color:rgb(201, 46, 25);
+        ">Получить
+      </button>
+      <img src="img/alienSaleFace.png" alt="" style="
+      width: 400px;
+      margin-top: -250px;
+      margin-left: 50px;
+      ">
+    </div>
+  </div>`
+);
 // Добавляем модальное окно в тело документа
 $("body").append(modal);
-
 // Обработчик клика по изображению - показать модалку
 imageElement.on('click', function() {
-	modal.css("display", "flex");
+  modal.css("display", "flex");
 });
-
 // Закрытие модалки по кнопке
 modal.find("#closeModal").on('click', function() {
-	modal.hide();
+  modal.css("display", "none");
+  imageElement.css("display", "none");
 });
-
+modal.find("#getSale").on('click', function() {
+  modal.css("display", "none");
+  imageElement.css("display", "none");
+});
 // Добавляем изображение в тело документа
 $("body").append(imageElement);
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Получаем все поля с классом no-paste
+  let noPasteInputs = document.querySelectorAll('.no-paste');
+  // Для каждого поля добавляем обработчики
+  noPasteInputs.forEach(input => {
+      // Запрещаем контекстное меню
+      input.addEventListener('contextmenu', function(event) {
+          event.preventDefault();
+          return false;
+      });
+      // Запрещаем вставку через Ctrl+V
+      input.addEventListener('keydown', function(event) {
+          // Проверяем комбинацию Ctrl+V или Cmd+V (для Mac)
+          if ((event.ctrlKey || event.metaKey) && event.key === 'v') {
+            event.preventDefault();
+              return false;
+          }
+      });
+      // Запрещаем вставку через меню "Вставить"
+      input.addEventListener('paste', function(event) {
+          event.preventDefault();
+          return false;
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  let scrollToTopBtn = document.getElementById('scrollToTop');
+  let contactSection = document.getElementById('myMainSeven');
+  function checkVisibility() {
+      let rect = contactSection.getBoundingClientRect();
+      let isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+      if (isVisible) {
+          scrollToTopBtn.classList.add('visible');
+      } else {
+          scrollToTopBtn.classList.remove('visible');
+      }
+  }
+  scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('resize', checkVisibility);
+  checkVisibility();
+});
