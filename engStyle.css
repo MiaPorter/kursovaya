@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(Vmake1738242988733.png);
+    background-image: url(img/background.png);
     font-family: "Montserrat Alternates", serif;
     font-weight: 500;
     font-style: normal;
@@ -2191,8 +2191,7 @@ h2 span {
 .myMainThree, 
 .myMainFour, 
 .myMainFive, 
-.myMainSix, 
-.myMainSeven {
+.myMainSix {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
@@ -2202,8 +2201,7 @@ h2 span {
 .myMainThree.show, 
 .myMainFour.show, 
 .myMainFive.show, 
-.myMainSix.show, 
-.myMainSeven.show {
+.myMainSix.show {
     opacity: 1;
     transform: translateY(0);
 }

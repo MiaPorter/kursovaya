@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(1000057392_polarr.png);
+    background-image: url(img/background.png);
     font-family: "Montserrat Alternates", serif;
     font-weight: 500;
     font-style: normal;
@@ -64,7 +64,8 @@ body {
     margin-top: -10px;
     background-color: #FA6312;
     border-radius: 15px;
-    padding-top: 10px;transition-duration: 0.1s;
+    padding-top: 10px;
+    transition-duration: 0.1s;
     text-decoration: none;
     box-shadow: 0 7px 0px #933d0f;
     position: relative;
@@ -166,12 +167,8 @@ body {
 }
 .myMainOneLeft {
     position: absolute;
-<<<<<<< HEAD
     top: 315px;
-=======
     top: 375px;
-    /* margin-left: -220px; */
->>>>>>> c7d75b6a47d7bd647767801e911e6fdfecbeb837
     animation: aniLeft 2.5s forwards;
 }
 @keyframes aniLeft {
@@ -184,12 +181,8 @@ body {
 }
 .myMainOneRight {
     position: absolute;
-<<<<<<< HEAD
     top: 340px;
-=======
     top: 400px;
-    /* margin-left: 900px; */
->>>>>>> c7d75b6a47d7bd647767801e911e6fdfecbeb837
     animation: aniRight 2.5s forwards;
 }
 @keyframes aniRight {
@@ -253,7 +246,7 @@ body {
 .myMainUnderBottom a:active {
     top: 3px;
     box-shadow: 0 2px 0px #933d0f;
- }
+}
 .myMainUnderBottom input::placeholder {
     color: #fa63128f;
 }
@@ -637,10 +630,6 @@ h2 span {
     box-shadow: 0 2px 0px #933d0f;
 }
 
-input:invalid {
-    border-color: red;
-}
-
 .myMainSeven {
     margin-top: 150px;
     margin-bottom: 20px;
@@ -677,6 +666,30 @@ input:invalid {
 }
 .myMainSevenBottomRight p {
     margin-left: -70px;
+}
+
+.discountModal {
+    display:none;
+	position: fixed;
+	z-index: 1000;
+	left: 0; top: 0; width: 100%; height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	align-items: center;
+	justify-content: center;
+}
+.discountModal div {
+    background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	min-width: 200px;
+	text-align:center;
+	position: relative;
+}
+.discountModal button {
+    position:absolute; 
+    top:5px; 
+    right:5px; 
+    cursor:pointer;
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -2175,8 +2188,7 @@ input:invalid {
 .myMainThree, 
 .myMainFour, 
 .myMainFive, 
-.myMainSix, 
-.myMainSeven {
+.myMainSix {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
@@ -2186,8 +2198,7 @@ input:invalid {
 .myMainThree.show, 
 .myMainFour.show, 
 .myMainFive.show, 
-.myMainSix.show, 
-.myMainSeven.show {
+.myMainSix.show {
     opacity: 1;
     transform: translateY(0);
 }

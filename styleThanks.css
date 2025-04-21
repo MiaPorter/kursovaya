@@ -4,47 +4,30 @@
 }
 
 body {
-    background-image: url(Vmake1738242988733.png);
+    background-image: url(img/background.png);
     font-family: "Montserrat Alternates", serif;
     font-weight: 500;
     font-style: normal;
 }
 
-/*.myMainThanks {
-    height: 400px;
-    margin-top: 10px;
-}
-.myMainThanksImg {
-    margin-top: 70px;
-}
-h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #EEEEEE;
-    text-align: center;
-    margin-top: 20px;
-}
-h2 span {
-    color: #FA6312;
-}
-p {
-    font-size: 1.1rem;
-    color: #EEEEEE;
-    text-align: center;
-    margin-top: 20px;
-} */
-
 button {
+    border: 3px solid #FA6312;
+    border-radius: 15px;
+    padding: 10px 40px 10px 40px;
     background-color: #FA6312;
-    border: 3.3px solid #FA6312;
-    padding: 10px;
-    width: 150px;
-    margin-left: 25px;
-    border-radius: 33px;
-    font-size: 1.2rem;
-    color: #EEEEEE;
+    color: #eae2dd;
     font-weight: 600;
-    margin-top: 30px;
+    font-size: 20px;
+    transition-duration: 0.1s;
+    text-decoration: none;
+    box-shadow: 0 7px 0px #933d0f;
+    position: relative;
+    top: 0px;
+    margin: 20px;
+}
+button:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #933d0f;
 }
 .myMainThanksTop img {
     width: 200px;

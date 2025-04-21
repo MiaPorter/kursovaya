@@ -53,25 +53,6 @@ applicantForm.addEventListener('submit', function appForm(event) {
   window.location.href = "thanks.html"
 });
 
-<<<<<<< HEAD
-// let randomImg = function (size) {
-//   return Math.floor(Math.random() * size);
-// }
-// let width = 1300;
-// let height = 4000;
-// let target = {
-//   x:randomImg(width),
-//   y:randomImg(height)
-// }
-// let image = '<img src="10757677.png" alt"">';
-// let imageElement = $(image);
-// imageElement.css({
-//   position: "absolute",
-//   left: target.x,
-//   top: target.y
-// })
-// $("body").append(imageElement);
-
 document.addEventListener('DOMContentLoaded', function() {
   let textElements = document.querySelectorAll('#drawText');
   textElements.forEach((el, index) => {
@@ -102,8 +83,7 @@ style.textContent = `
   .myMainThree.visible, 
   .myMainFour.visible, 
   .myMainFive.visible, 
-  .myMainSix.visible, 
-  .myMainSeven.visible {
+  .myMainSix.visible {
       opacity: 1 !important;
       transform: translateY(0) !important;
   }
@@ -141,7 +121,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => { // селектор 
     }
   });
 });
-=======
 //принимает аргумент (size) и возвращает случайное целое число от 0 до size - 1
 let randomImg = function (size) {
 	return Math.floor(Math.random() * size); //генерирует случайное число от 0 до 1 и умножает на size. затем округляет это число вниз до ближайшего целого
@@ -155,12 +134,62 @@ let target = {
 	y:randomImg(height) //от 0 до 3999
 }
 
-let image = '<img src="10757677.png" alt="">';
-let imageElement = $(image); //создание элемента изображения из строки выше
+// let image = '<img src="img/alienSale.png" alt="">';
+// let imageElement = $(image); //создание элемента изображения из строки выше
+// imageElement.css({
+// 	position: "absolute",
+// 	left: target.x,
+// 	top: target.y
+// })
+// $("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
+
+let image = '<img src="img/alienSale.png" alt="Скидка 10%" class="alienSale">';
+let imageElement = $(image);
 imageElement.css({
 	position: "absolute",
 	left: target.x,
-	top: target.y
-})
-$("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
->>>>>>> c7d75b6a47d7bd647767801e911e6fdfecbeb837
+	top: target.y,
+	cursor: "pointer" // Указатель курсора при наведении
+});
+
+// Создаем модальное окно (скрытое)
+let modal = $(`
+	<div id="discountModal" style="
+		display:none;
+		position: fixed;
+		z-index: 1000;
+		left: 0; top: 0; width: 100%; height: 100%;
+		background-color: rgba(0,0,0,0.5);
+		align-items: center;
+		justify-content: center;
+	">
+		<div style="
+			background-color: white;
+			padding: 20px;
+			border-radius: 8px;
+			min-width: 200px;
+			text-align:center;
+			position: relative;
+		">
+			<h2>Скидка 10%</h2>
+			<button id="closeModal" style="
+				position:absolute; top:5px; right:5px; cursor:pointer;">×</button>
+		</div>
+	</div>
+`);
+
+// Добавляем модальное окно в тело документа
+$("body").append(modal);
+
+// Обработчик клика по изображению - показать модалку
+imageElement.on('click', function() {
+	modal.css("display", "flex");
+});
+
+// Закрытие модалки по кнопке
+modal.find("#closeModal").on('click', function() {
+	modal.hide();
+});
+
+// Добавляем изображение в тело документа
+$("body").append(imageElement);
