@@ -53,6 +53,7 @@ applicantForm.addEventListener('submit', function appForm(event) {
   window.location.href = "thanks.html"
 });
 
+<<<<<<< HEAD
 // let randomImg = function (size) {
 //   return Math.floor(Math.random() * size);
 // }
@@ -140,3 +141,26 @@ document.querySelectorAll('a[href^="#"]').forEach(link => { // селектор 
     }
   });
 });
+=======
+//принимает аргумент (size) и возвращает случайное целое число от 0 до size - 1
+let randomImg = function (size) {
+	return Math.floor(Math.random() * size); //генерирует случайное число от 0 до 1 и умножает на size. затем округляет это число вниз до ближайшего целого
+}
+
+let width = 1300; //ширина страницы вашего сайта
+let height = 4000; //высота страницы вашего сайта
+
+let target = {
+	x:randomImg(width), //диапазон от 0 до 1299
+	y:randomImg(height) //от 0 до 3999
+}
+
+let image = '<img src="10757677.png" alt="">';
+let imageElement = $(image); //создание элемента изображения из строки выше
+imageElement.css({
+	position: "absolute",
+	left: target.x,
+	top: target.y
+})
+$("body").append(imageElement); //добавляет созданный элемент изображения в тело HTML-документа
+>>>>>>> c7d75b6a47d7bd647767801e911e6fdfecbeb837

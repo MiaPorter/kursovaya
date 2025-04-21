@@ -102,8 +102,11 @@ body {
     width: 100%;
 }
 
-.myMainOne {
-    margin-bottom: 70px;
+.myMainOneAll {
+    width: 100%;
+    height: 700px;
+    margin-top: 80px;
+    margin-bottom: 260px;
 }
 .myImg img {
     margin: auto;
@@ -145,7 +148,7 @@ body {
     font-size: 4.6rem;
     color: #eae2dd;
     position: absolute;
-    top: 290px;
+    top: 360px;
     margin-left: 180px;
 }
 .textOne span, .textTwo span, .myMainUnderTop span {
@@ -155,7 +158,7 @@ body {
     font-size: 4.6rem;
     color: #eae2dd;
     position: absolute;
-    top: 380px;
+    top: 450px;
     margin-left: 410px;
 }
 .myMainOneMiddle h1, .myMainUnderTop h2 {
@@ -163,7 +166,12 @@ body {
 }
 .myMainOneLeft {
     position: absolute;
+<<<<<<< HEAD
     top: 315px;
+=======
+    top: 375px;
+    /* margin-left: -220px; */
+>>>>>>> c7d75b6a47d7bd647767801e911e6fdfecbeb837
     animation: aniLeft 2.5s forwards;
 }
 @keyframes aniLeft {
@@ -176,7 +184,12 @@ body {
 }
 .myMainOneRight {
     position: absolute;
+<<<<<<< HEAD
     top: 340px;
+=======
+    top: 400px;
+    /* margin-left: 900px; */
+>>>>>>> c7d75b6a47d7bd647767801e911e6fdfecbeb837
     animation: aniRight 2.5s forwards;
 }
 @keyframes aniRight {
@@ -193,7 +206,7 @@ body {
     position: absolute;
     background-color: #eae2dd;
     border-radius: 35px;
-    top: 520px;
+    top: 600px;
     margin-left: 50px;
     animation: animUnder 2s;
 }
@@ -250,7 +263,7 @@ body {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 680px;
+    top: 760px;
     background-color: black;
 }
 .myMainUnderSale h5 {
@@ -622,6 +635,10 @@ h2 span {
 .myMainSixBottom button:active {
     top: 3px;
     box-shadow: 0 2px 0px #933d0f;
+}
+
+input:invalid {
+    border-color: red;
 }
 
 .myMainSeven {
