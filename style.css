@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(Vmake1738242988733.png);
+    background-image: url(1000057392_polarr.png);
     font-family: "Montserrat Alternates", serif;
     font-weight: 500;
     font-style: normal;
@@ -34,8 +34,8 @@ body {
     }
 }
 .myHeader a {
-    font-size: 1.3rem;
-    color: white;
+    font-size: 22px;
+    color: #eae2dd;
     text-decoration: none;
 }
 .headerLeft {
@@ -80,7 +80,7 @@ body {
     margin-top: -10px;
     padding-top: 7px;
     border-radius: 15px;
-    border: 3px solid white;
+    border: 3px solid #eae2dd;
     text-decoration: none;
     box-shadow: 0 7px 0px #7a7a7a;
     position: relative;
@@ -92,7 +92,7 @@ body {
 }
 .headerLeft a:after, .headerRight .color:after {
     content: "";
-    background-color: #EEEEEE;
+    background-color: #eae2dd;
     display: block;
     height: 2px;
     width: 0%;
@@ -143,7 +143,7 @@ body {
 }
 .myMainOneMiddle .textOne {
     font-size: 4.6rem;
-    color: #EEEEEE;
+    color: #eae2dd;
     position: absolute;
     top: 290px;
     margin-left: 180px;
@@ -153,7 +153,7 @@ body {
 }
 .myMainOneMiddle .textTwo {
     font-size: 4.6rem;
-    color: #EEEEEE;
+    color: #eae2dd;
     position: absolute;
     top: 380px;
     margin-left: 410px;
@@ -164,7 +164,6 @@ body {
 .myMainOneLeft {
     position: absolute;
     top: 315px;
-    /* margin-left: -220px; */
     animation: aniLeft 2.5s forwards;
 }
 @keyframes aniLeft {
@@ -178,7 +177,6 @@ body {
 .myMainOneRight {
     position: absolute;
     top: 340px;
-    /* margin-left: 900px; */
     animation: aniRight 2.5s forwards;
 }
 @keyframes aniRight {
@@ -193,7 +191,7 @@ body {
     width: 1200px;
     height: 160px;
     position: absolute;
-    background-color: #EEEEEE;
+    background-color: #eae2dd;
     border-radius: 35px;
     top: 520px;
     margin-left: 50px;
@@ -201,10 +199,10 @@ body {
 }
 @keyframes animUnder {
     from {
-        background-color: #eeeeee00;
+        background-color: #eae2dd00;
     }
       to {
-        background-color: #EEEEEE;
+        background-color: #eae2dd;
     }
 }
 .myMainUnderTop h2 {
@@ -221,7 +219,7 @@ body {
     border: 3px solid #FA6312;
     border-radius: 15px;
     padding: 5px;
-    background-color: #EEEEEE;
+    background-color: #eae2dd;
     font-weight: 600;
     font-size: 20px;
 }
@@ -230,7 +228,7 @@ body {
     border-radius: 15px;
     padding: 10px 40px 10px 40px;
     background-color: #FA6312;
-    color: #EEEEEE;
+    color: #eae2dd;
     font-weight: 600;
     font-size: 20px;
     transition-duration: 0.1s;
@@ -257,8 +255,8 @@ body {
 }
 .myMainUnderSale h5 {
     color: #FA6312;
-    padding-top: 6px;
-    font-size: 1.8rem;
+    padding-top: 9px;
+    font-size: 24px;
 }
 .timer {
     display: flex;
@@ -273,14 +271,12 @@ body {
 }
 
 .myMainTwo {
-    /* width: 100%; */
     height: 36rem;
     margin-top: 150px;
-    background-color: #EEEEEE;
+    background-color: #eae2dd;
     border-radius: 70px;
     display: flex;
     justify-content: space-between;
-    /* opacity: 0; */;
 }
 .myMainTwoAnim {
     animation: animMainTwo 2.5s forwards;
@@ -315,7 +311,7 @@ body {
     margin-bottom: 2rem;
 }
 .textP {
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: 600;
 }
 .myStarOne {
@@ -385,13 +381,13 @@ body {
 .myMainThreeRightTopLeftBottom h2, .myMainThreeRightTopRightBottom h2, .myMainThreeRightBottomLeftTop h2 {
     font-size: 4.1rem;
     text-align: center;
-    color: #EEEEEE;
+    color: #eae2dd;
     padding-top: 15px;
 }
 .myMainThreeRightTopLeftBottom p, .myMainThreeRightTopRightBottom p, .myMainThreeRightBottomLeftTop p {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
-    color: #EEEEEE;
+    color: #eae2dd;
     margin-top: -12px;
 }
 .myMainThreeRightBottomRight h2 {
@@ -402,7 +398,7 @@ body {
     margin-top: 40px;
 }
 .white {
-    color: #EEEEEE;
+    color: #eae2dd;
 }
 .oran {
     color: #FA6312;
@@ -447,7 +443,7 @@ body {
     font-size: 4rem;
     font-weight: 600;
     line-height: 0.8;
-    color: #EEEEEE;
+    color: #eae2dd;
 }
 .productsMiddle {
     margin-top: 0.8rem;
@@ -480,11 +476,11 @@ body {
         text-align: right;
         margin-right: 20px;
         margin-top: 20px;
-        color: #EEEEEE;
+        color: #eae2dd;
     };
     .nameHouse {
         display: block;
-        color: #EEEEEE;
+        color: #eae2dd;
         margin-top: 20rem;
         font-size: 2rem;
         margin-left: 20px;
@@ -496,6 +492,9 @@ body {
 .count {
     display: none;
 }
+.two h2 {
+    text-shadow: 1px 1px 2px rgb(106, 76, 56);
+}
 
 .myMainFive {
     width: 91.9rem;
@@ -505,7 +504,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 250px;
-    background-color: #EEEEEE;
+    background-color: #eae2dd;
     border-radius: 10px;
 }
 .discount {
@@ -571,8 +570,8 @@ body {
 }
 .content {
     position: relative;
-    color: #EEEEEE;
-    font-size: 1.5rem;
+    color: #eae2dd;
+    font-size: 23px;
     text-align: center;
     margin-top: -200px;
     display: none;
@@ -588,19 +587,19 @@ body {
 .myMainSixTop h2 {
     font-size: 4rem;
     font-weight: 600;
-    color: #EEEEEE;
+    color: #eae2dd;
 }
 h2 span {
     color: #FA6312;
 }
 .myMainSixBottom input  {
     background-color: black;
-    border: 3.3px solid #EEEEEE;
+    border: 3.3px solid #eae2dd;
     padding: 13px;
     border-radius: 15px;
-    margin-right: 30px;
-    font-size: 1.2rem;
-    color: #EEEEEE;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #eae2dd;
     font-weight: 600;
 }
 .myMainSixBottom {
@@ -613,8 +612,8 @@ h2 span {
     width: 280px;
     margin-left: 25px;
     border-radius: 13px;
-    font-size: 1.2rem;
-    color: #EEEEEE;
+    font-size: 20px;
+    color: #eae2dd;
     font-weight: 600;
     box-shadow: 0 10px 0px #933d0f;
     position: relative;
@@ -632,7 +631,7 @@ h2 span {
 .myMainSevenTop h2 {
     font-size: 4rem;
     font-weight: 600;
-    color: #EEEEEE;
+    color: #eae2dd;
 }
 .myMainSevenBottomLeft img, .myMainSevenBottomMiddle img, .myMainSevenBottomRight img, .myMainSevenBottomRightTwo img {
     width: 50px;
@@ -640,8 +639,8 @@ h2 span {
     margin-right: 20px;
 }
 .myMainSevenBottom p, .myMainSevenBottomTwo p {
-    color: #EEEEEE;
-    font-size: 1.4rem;
+    color: #eae2dd;
+    font-size: 24px;
     padding-top: 10px;
 }
 .myMainSevenBottom, .myMainSevenBottomTwo {
@@ -717,7 +716,6 @@ h2 span {
         margin-left: 26%;
     }
     .myMainOneLeft {
-        /* margin-left: -4%; */
         top: 350px;
     }
     @keyframes aniLeft {
@@ -729,7 +727,6 @@ h2 span {
         }
     }
     .myMainOneRight {
-        /* margin-left: 77%; */
         top: 350px;
     }
     @keyframes aniRight {
@@ -765,7 +762,7 @@ h2 span {
     .myMainTwo {
         width: 100%;
         height: 37rem;
-        background-color: #EEEEEE;
+        background-color: #eae2dd;
         border-radius: 70px;
         display: flex;
         justify-content: space-between;
@@ -862,7 +859,7 @@ h2 span {
         line-height: 0.6;
         margin-left: 6%;
         margin-top: 40px;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .none-two span {
         color: #FA6312;
@@ -881,7 +878,7 @@ h2 span {
         font-size: 4rem;
         font-weight: 600;
         line-height: 0.8;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .productsMiddle {
         margin-top: 0.8rem;
@@ -914,11 +911,11 @@ h2 span {
             text-align: right;
             margin-right: 20px;
             margin-top: 20px;
-            color: #EEEEEE;
+            color: #eae2dd;
         };
         .nameHouse {
             display: block;
-            color: #EEEEEE;
+            color: #eae2dd;
             margin-top: 20rem;
             font-size: 2rem;
             margin-left: 20px;
@@ -976,7 +973,7 @@ h2 span {
     .myMainSixTop h2 {
         font-size: 4rem;
         font-weight: 600;
-        color: #EEEEEE;
+        color: #eae2dd;
         margin-left: 1rem;
     }
     h2 span {
@@ -984,12 +981,12 @@ h2 span {
     }
     .myMainSixBottom input  {
         background-color: black;
-        border: 3.3px solid #EEEEEE;
+        border: 3.3px solid #eae2dd;
         padding: 13px;
         border-radius: 15px;
         margin-right: 20px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
         width: 190px;
     }
@@ -1004,21 +1001,9 @@ h2 span {
         margin-left: 25px;
         border-radius: 13px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
     }
-    /* .myMainSevenBottomRight p {
-        margin-left: -260px;
-    }
-    .myMainSevenBottomRight {
-        margin-left: -91px;
-    }
-    .myMainSevenBottomMiddle img {
-        margin-left: 110px;
-    }
-    .myMainSevenBottomRight img {
-        margin-left: -38px;
-    } */
     .myMainSevenBottomRight {
         display: none;
     }
@@ -1190,7 +1175,7 @@ h2 span {
         line-height: 0.6;
         margin-left: 6%;
         margin-top: 40px;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .none-two span {
         color: #FA6312;
@@ -1209,7 +1194,7 @@ h2 span {
         font-size: 4rem;
         font-weight: 600;
         line-height: 0.8;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .productsMiddle {
         margin-top: 0.8rem;
@@ -1243,11 +1228,11 @@ h2 span {
             text-align: right;
             margin-right: 20px;
             margin-top: 20px;
-            color: #EEEEEE;
+            color: #eae2dd;
         };
         .nameHouse {
             display: block;
-            color: #EEEEEE;
+            color: #eae2dd;
             margin-top: 20rem;
             font-size: 2rem;
             margin-left: 20px;
@@ -1303,7 +1288,7 @@ h2 span {
     }
     .content {
         position: relative;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-size: 1.3rem;
         text-align: center;
         margin-top: -190px;
@@ -1316,12 +1301,12 @@ h2 span {
 
     .myMainSixBottom input  {
         background-color: black;
-        border: 3.3px solid #EEEEEE;
+        border: 3.3px solid #eae2dd;
         padding: 13px;
         border-radius: 15px;
         margin-right: 10px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
         width: 160px;
     }
@@ -1338,7 +1323,7 @@ h2 span {
         margin-left: 3px;
         border-radius: 13px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
     }
 
@@ -1349,7 +1334,7 @@ h2 span {
     .myMainSevenTop h2 {
         font-size: 4rem;
         font-weight: 600;
-        color: #EEEEEE;
+        color: #eae2dd;
         margin-left: 40px;
     }
     .myMainSevenBottomLeft img, .myMainSevenBottomMiddle img, .myMainSevenBottomRight img {
@@ -1359,7 +1344,7 @@ h2 span {
         margin-left: 20px;
     }
     .myMainSevenBottom p {
-        color: #EEEEEE;
+        color: #eae2dd;
         font-size: 1.4rem;
         padding-top: 10px;
     }
@@ -1573,7 +1558,7 @@ h2 span {
         line-height: 0.6;
         margin-left: 6%;
         margin-top: 40px;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .none-two span {
         color: #FA6312;
@@ -1592,7 +1577,7 @@ h2 span {
         font-size: 4rem;
         font-weight: 600;
         line-height: 0.8;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .productsMiddle {
         margin-top: 0.8rem;
@@ -1626,11 +1611,11 @@ h2 span {
             text-align: right;
             margin-right: 20px;
             margin-top: 20px;
-            color: #EEEEEE;
+            color: #eae2dd;
         };
         .nameHouse {
             display: block;
-            color: #EEEEEE;
+            color: #eae2dd;
             margin-top: 20rem;
             font-size: 2rem;
             margin-left: 20px;
@@ -1685,7 +1670,7 @@ h2 span {
     }
     .content {
         position: relative;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-size: 1.3rem;
         text-align: center;
         margin-top: -190px;
@@ -1698,12 +1683,12 @@ h2 span {
 
     .myMainSixBottom input  {
         background-color: black;
-        border: 3.3px solid #EEEEEE;
+        border: 3.3px solid #eae2dd;
         padding: 13px;
         border-radius: 15px;
         margin-right: 10px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
         width: 160px;
     }
@@ -1720,7 +1705,7 @@ h2 span {
         margin-left: 3px;
         border-radius: 13px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
     }
 
@@ -1731,7 +1716,7 @@ h2 span {
     .myMainSevenTop h2 {
         font-size: 4rem;
         font-weight: 600;
-        color: #EEEEEE;
+        color: #eae2dd;
         margin-left: 40px;
     }
     .myMainSevenBottomLeft img, .myMainSevenBottomMiddle img, .myMainSevenBottomRight img {
@@ -1741,7 +1726,7 @@ h2 span {
         margin-left: 20px;
     }
     .myMainSevenBottom p {
-        color: #EEEEEE;
+        color: #eae2dd;
         font-size: 1.4rem;
         padding-top: 10px;
     }
@@ -1953,7 +1938,7 @@ h2 span {
         line-height: 0.6;
         margin-left: 6%;
         margin-top: 40px;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .none-two span {
         color: #FA6312;
@@ -1972,7 +1957,7 @@ h2 span {
         font-size: 4rem;
         font-weight: 600;
         line-height: 0.8;
-        color: #EEEEEE;
+        color: #eae2dd;
     }
     .productsMiddle {
         margin-top: 0.8rem;
@@ -2007,11 +1992,11 @@ h2 span {
             text-align: right;
             margin-right: 20px;
             margin-top: 20px;
-            color: #EEEEEE;
+            color: #eae2dd;
         };
         .nameHouse {
             display: block;
-            color: #EEEEEE;
+            color: #eae2dd;
             margin-top: 20rem;
             font-size: 2rem;
             margin-left: 20px;
@@ -2074,7 +2059,7 @@ h2 span {
     }
     .content {
         position: relative;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-size: 1.3rem;
         text-align: center;
         margin-top: -190px;
@@ -2091,19 +2076,19 @@ h2 span {
     }
     .myMainSixBottom input  {
         background-color: black;
-        border: 3.3px solid #EEEEEE;
+        border: 3.3px solid #eae2dd;
         padding: 13px;
         border-radius: 15px;
         margin-right: 10px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
         width: 180px;
     }
     .myMainSixTop h2 {
         font-size: 4rem;
         font-weight: 600;
-        color: #EEEEEE;
+        color: #eae2dd;
         margin-left: 2rem;
     }
     .myMainSixTop {
@@ -2122,14 +2107,14 @@ h2 span {
         margin-left: 3px;
         border-radius: 13px;
         font-size: 1.2rem;
-        color: #EEEEEE;
+        color: #eae2dd;
         font-weight: 600;
     }
 
     .myMainSevenTop h2 {
         font-size: 4rem;
         font-weight: 600;
-        color: #EEEEEE;
+        color: #eae2dd;
         margin-left: 210px;
         width: 800px;
     }
@@ -2144,7 +2129,7 @@ h2 span {
         margin-left: 20px;
     }
     .myMainSevenBottom p {
-        color: #EEEEEE;
+        color: #eae2dd;
         font-size: 1.4rem;
         padding-top: 10px;
     }
@@ -2159,4 +2144,33 @@ h2 span {
         display: flex;
         justify-content: space-around;
     }
+}
+
+/* анимации */
+#drawText {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    /* делает плавную анимация появления текста и его передвижения */
+}
+
+.myMainTwo, 
+.myMainThree, 
+.myMainFour, 
+.myMainFive, 
+.myMainSix, 
+.myMainSeven {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.myMainTwo.show, 
+.myMainThree.show, 
+.myMainFour.show, 
+.myMainFive.show, 
+.myMainSix.show, 
+.myMainSeven.show {
+    opacity: 1;
+    transform: translateY(0);
 }
