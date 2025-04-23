@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let numHours = document.querySelector('#timerHours');
     let numMinutes = document.querySelector('#timerMinutes');
     let numSeconds = document.querySelector('#timerSeconds');
-    let deadline = new Date('2025-12-31T23:59:59'); //конечная дата
+    let deadline = new Date('2025-12-31T00:00:00');
   
     // Функция обновления таймера
     let updateTimer = function() {
         let now = new Date();
         let diff = Math.max(0, deadline - now); //результат будет гарантированно не меньше 0
   
-        let days = Math.floor(diff / (1000 * 60 * 60 * 24)); //округляет результат вниз. дифф делим на мс с мин и часы. переводит мс в дни
-        let hours = Math.floor(diff / (1000 * 60 * 60) % 24); //вычисляет количество полных часов, исключая уже учтенные полные дни
-        let minutes = Math.floor(diff / (1000 * 60) % 60); //вычисляет количество полных минут, исключая уже учтенные полные часы
-        let seconds = Math.floor((diff / 1000) % 60); //точно также с секундами
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+        let minutes = Math.floor(diff / (1000 * 60) % 60);
+        let seconds = Math.floor((diff / 1000) % 60);
   
-        numDays.textContent = String(days).padStart(2, '0'); //преобразует в строку и добавляет ведущие нули, чтобы строка всегда имела длину 2 символа
+        numDays.textContent = String(days).padStart(2, '0');
         numHours.textContent = String(hours).padStart(2, '0');
         numMinutes.textContent = String(minutes).padStart(2, '0');
         numSeconds.textContent = String(seconds).padStart(2, '0');
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let timeUpd = setInterval(updateTimer, 1000);
 });
 
-let observer = new IntersectionObserver(entries => { //нужен для отслеживания пересечения элементов, массив всех наблюдаемых элементов entries
+let observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) { //если элемент вошел в зону видимости
+    if (entry.isIntersecting) {
       entry.target.classList.add('myMainTwoAnim');
     }
   });
@@ -46,7 +46,7 @@ let observerTwo = new IntersectionObserver(entriesTwo => {
 });
 observerTwo.observe(document.querySelector('.myMainThreeLeft'));
 
-let applicantForm = document.getElementById('applHome')
+let applicantForm = document.getElementById('applHome');
 applicantForm.addEventListener('submit', function appForm(event) {
   // Просим форму не отправлять данные самостоятельно
   event.preventDefault()
@@ -56,88 +56,53 @@ applicantForm.addEventListener('submit', function appForm(event) {
 document.addEventListener('DOMContentLoaded', function() {
   let textElements = document.querySelectorAll('#drawText');
   textElements.forEach((el, index) => {
-      setTimeout(() => { //для каждого элемента (el) устанавливается таймаут:
+      setTimeout(() => {
           el.style.opacity = '1';
           el.style.transform = 'translateY(0)';
-      }, index * 500); //создаёт задержку: 0ms для первого элемента, 500ms для второго
+      }, index * 500);
   });
 });
 
 function animateOnScroll() {
   let elements = document.querySelectorAll('.myMainTwo, .myMainThree, .myMainFour, .myMainFive, .myMainSix, .myMainSeven');
-  
   elements.forEach(el => {
       let elementPosition = el.getBoundingClientRect().top;
-      let screenPosition = window.innerHeight / 1.3;
-      
+      let screenPosition = window.innerHeight / 1.5;
       if (elementPosition < screenPosition) {
           el.classList.add('show');
       }
   });
 }
-// CSS класс для анимации
-let style = document.createElement('style');
-style.textContent = `
-  .myMainTwo.visible, 
-  .myMainThree.visible, 
-  .myMainFour.visible, 
-  .myMainFive.visible, 
-  .myMainSix.visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-  }
-`;
-document.head.appendChild(style); //добавляет стиль в код
-window.addEventListener('scroll', animateOnScroll); //При каждом скролле будет вызываться функция animateOnScroll
+window.addEventListener('scroll', animateOnScroll);
 
-let submitButton = document.querySelector('#applHome button[type="submit"]');
+let submitButton = document.querySelector('button[type="submit"]');
 if (submitButton) {
     setInterval(() => {
-        submitButton.style.transform = 'scale(1.05)'; //увеличиваем на 5%
+        submitButton.style.transform = 'scale(1.05)';
         setTimeout(() => {
             submitButton.style.transform = 'scale(1)';
         }, 1000);
     }, 2000);
-    
-    submitButton.style.transition = 'transform 1s ease';
+    submitButton.style.transition = 'transform 1s ease'; //медленно ускоряется/замедляется
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(link => { // селектор для поиска a - все теги <a>, [href^="#"] - у которых атрибут href начинается с #
-  link.addEventListener('click', function(event) {
-    // Отменяем стандартное поведение
-    event.preventDefault();
-    
-    let targetId = this.getAttribute('href'); //при клике на ссылку получаем значение href
-    let targetElement = document.querySelector(targetId); //находим элемент с соответствующим id
-    
-    // Прокручиваем плавно к элементу
-    if (targetElement) {
-      targetElement.scrollIntoView({ //метод плавной прокрутки
-        behavior: 'smooth' //плавная анимация
-      });
-    }
-  });
-});
-
-//принимает аргумент (size) и возвращает случайное целое число от 0 до size - 1
 let randomImg = function (size) {
 	return Math.floor(Math.random() * size); //генерирует случайное число от 0 до 1 и умножает на size. затем округляет это число вниз до ближайшего целого
 }
-let width = 1200; //ширина страницы вашего сайта
-let height = 4000; //высота страницы вашего сайта
+let width = 1200;
+let height = 4000;
 let target = {
-	x:randomImg(width), //диапазон от 0 до 1299
-	y:randomImg(height) //от 0 до 3999
+	x:randomImg(width),
+	y:randomImg(height)
 }
-let image = '<img src="img/alienSale.png" alt="Скидка 10%" class="alienSale">';
+let image = '<img src="img/alienSale.png" alt="" class="alienSale">';
 let imageElement = $(image);
 imageElement.css({
   position: "absolute",
   left: target.x,
   top: target.y,
-  cursor: "pointer" // Указатель курсора при наведении
+  cursor: "pointer"
 });
-// Создаем модальное окно (скрытое)
 let modal = $(`
   <div id="discountModal" style="
     display: none;
@@ -183,10 +148,6 @@ let modal = $(`
         right:10px; 
         cursor:pointer;
         color: #eae2dd;
-        button:active {
-          top: 3px;
-          box-shadow: 0 2px 0px #933d0f;
-        } 
         ">X
       </button>
       <button id="getSale" style="
@@ -204,18 +165,17 @@ let modal = $(`
         ">Получить
       </button>
       <img src="img/alienSaleFace.png" alt="" style="
-      width: 400px;
-      margin-top: -250px;
-      margin-left: 50px;
+        width: 400px;
+        margin-top: -250px;
+        margin-left: 50px;
       ">
     </div>
   </div>`
 );
-// Обработчик клика по изображению - показать модалку
+// Обработчик клика
 imageElement.on('click', function() {
   modal.css("display", "flex");
 });
-// Закрытие модалки по кнопке
 modal.find("#closeModal").on('click', function() {
   modal.css("display", "none");
   imageElement.css("display", "none");
@@ -224,57 +184,46 @@ modal.find("#getSale").on('click', function() {
   modal.css("display", "none");
   imageElement.css("display", "none");
 });
-// Добавляем модальное окно в тело документа
 $("body").append(modal);
-// Добавляем изображение в тело документа
 $("body").append(imageElement);
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Получаем все поля с классом no-paste
-  let noPasteInputs = document.querySelectorAll('.no-paste');
-  // Для каждого поля добавляем обработчики
+  let noPasteInputs = document.querySelectorAll('.noPaste');
   noPasteInputs.forEach(input => {
       // Запрещаем контекстное меню
       input.addEventListener('contextmenu', function(event) {
-          event.preventDefault();
-          return false;
+          event.preventDefault(); //полностью отменяет стандартное поведение браузера при вставке текста
       });
       // Запрещаем вставку через Ctrl+V
       input.addEventListener('keydown', function(event) {
-          // Проверяем комбинацию Ctrl+V или Cmd+V (для Mac)
           if ((event.ctrlKey || event.metaKey) && event.key === 'v') {
             event.preventDefault();
-              return false;
           }
       });
       // Запрещаем вставку через меню "Вставить"
       input.addEventListener('paste', function(event) {
           event.preventDefault();
-          return false;
       });
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   let scrollToTopBtn = document.getElementById('scrollToTop');
   let contactSection = document.getElementById('myMainSeven');
-  function checkVisibility() {
-      let rect = contactSection.getBoundingClientRect();
-      let isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
-      if (isVisible) {
-          scrollToTopBtn.classList.add('visible');
-      } else {
-          scrollToTopBtn.classList.remove('visible');
-      }
-  }
-  scrollToTopBtn.addEventListener('click', function() {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      scrollToTopBtn.classList.toggle('visible', entry.isIntersecting);
+    });
+  }, 
+  {
+    threshold: 0.1 // Срабатывает, когда видно хотя бы 10% элемента
   });
-  window.addEventListener('scroll', checkVisibility);
-  window.addEventListener('resize', checkVisibility);
-  checkVisibility();
+  observer.observe(contactSection);
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });
