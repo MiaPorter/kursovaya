@@ -106,6 +106,20 @@ body {
     width: 40px;
     margin-top: -6px;
 }
+.offcanvas-body {
+    padding: 0rem 1rem;
+    margin: 0;
+}
+.offcanvas-body a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+.offcanvas-body a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+}
 .headerLeft a:after, .headerRight .color:after {
     content: "";
     background-color: #eae2dd;
@@ -182,6 +196,7 @@ body {
 }
 .myMainOneMiddle h1, .myMainUnderTop h2 {
     font-weight: 600;
+    color: #331708;
 }
 .myMainOneLeft {
     position: absolute;
@@ -325,6 +340,7 @@ body {
     font-size: 4rem;
     font-weight: 600;
     line-height: 0.8;
+    color: #331708;
 }
 .dark {
     margin-bottom: 2rem;
@@ -335,6 +351,7 @@ body {
 .textP {
     font-size: 20px;
     font-weight: 600;
+    color: #331708;
 }
 .findHome {
     height: 90px;
@@ -352,7 +369,6 @@ body {
     top: 3px;
     box-shadow: 0 2px 0px #933d0f;
 }
-
 .myStarOne {
     margin-left: -30%;
     margin-top: -25%;

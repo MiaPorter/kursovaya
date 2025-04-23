@@ -5,6 +5,9 @@
 
 body {
     background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Растягивает изображение на всю доступную область */
+    background-attachment: fixed;
     font-family: "Montserrat Alternates", serif;
     font-weight: 500;
     font-style: normal;

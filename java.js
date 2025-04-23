@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция обновления таймера
     let updateTimer = function() {
         let now = new Date();
-        let diff = Math.max(0, deadline - now);
+        let diff = Math.max(0, deadline - now); //результат будет гарантированно не меньше 0
   
-        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        let minutes = Math.floor((diff / (1000 * 60)) % 60);
-        let seconds = Math.floor((diff / 1000) % 60);
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24)); //округляет результат вниз. дифф делим на мс с мин и часы. переводит мс в дни
+        let hours = Math.floor(diff / (1000 * 60 * 60) % 24); //вычисляет количество полных часов, исключая уже учтенные полные дни
+        let minutes = Math.floor(diff / (1000 * 60) % 60); //вычисляет количество полных минут, исключая уже учтенные полные часы
+        let seconds = Math.floor((diff / 1000) % 60); //точно также с секундами
   
-        numDays.textContent = String(days).padStart(2, '0');
+        numDays.textContent = String(days).padStart(2, '0'); //преобразует в строку и добавляет ведущие нули, чтобы строка всегда имела длину 2 символа
         numHours.textContent = String(hours).padStart(2, '0');
         numMinutes.textContent = String(minutes).padStart(2, '0');
         numSeconds.textContent = String(seconds).padStart(2, '0');
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let timeUpd = setInterval(updateTimer, 1000);
 });
 
-let observer = new IntersectionObserver(entries => {
+let observer = new IntersectionObserver(entries => { //нужен для отслеживания пересечения элементов, массив всех наблюдаемых элементов entries
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting) { //если элемент вошел в зону видимости
       entry.target.classList.add('myMainTwoAnim');
     }
   });
@@ -211,8 +211,6 @@ let modal = $(`
     </div>
   </div>`
 );
-// Добавляем модальное окно в тело документа
-$("body").append(modal);
 // Обработчик клика по изображению - показать модалку
 imageElement.on('click', function() {
   modal.css("display", "flex");
@@ -226,8 +224,11 @@ modal.find("#getSale").on('click', function() {
   modal.css("display", "none");
   imageElement.css("display", "none");
 });
+// Добавляем модальное окно в тело документа
+$("body").append(modal);
 // Добавляем изображение в тело документа
 $("body").append(imageElement);
+
 
 document.addEventListener('DOMContentLoaded', function() {
   // Получаем все поля с классом no-paste
